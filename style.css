@@ -1,0 +1,16 @@
+:root {
+    --color-blue: #101b39; 
+    --color-vintage: #c2baa6;
+
+    --font: 'Jost', sans-serif ;
+    --text-color: #554e4f;
+}
+
+body {
+    background-color: var(--color-vintage);
+    font-family: var(--font);
+}
+
+.menu__horizontal {
+    background-color: #1E2022;
+}
