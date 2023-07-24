@@ -9,6 +9,12 @@
     --text-color-blue: #18314F;
     --text-bg-hover: #18314f57;
     --text-color-alt: #e8d9c8;
+
+    --btn-bg-blue: #18314F;
+    --btn-bg-white: #F8F1F4;
+    --btn-text-blue: #18314F;
+    --btn-text: #ffffff;
+
 }
 html {
     scroll-behavior: smooth;
@@ -108,7 +114,7 @@ body {
 
 /* section banner */
 
-.banner {
+/* .banner {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -182,7 +188,7 @@ body {
     font-size: 16px;
     font-weight: 200;
     cursor: default;
-}
+} */
 
 
 /* GIFTCODE */

@@ -1,0 +1,32 @@
+.btn {
+    background-color: var(--btn-bg-blue);
+    color: var(--btn-text);
+    padding: .8rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 18px;
+    transition: .3s ease;
+}
+.btn:hover {
+    background-color: var(--btn-bg-white);
+    color: var(--btn-text-blue);
+}
+.btn__box {
+    display: flex;
+    align-items: center;
+
+}
+.btn__plus {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: var(--text-color-blue);
+    transition: .3s ease;
+}
+.btn__plus:hover {
+    transform: scale(1.1);
+    font-weight: 500;
+}
