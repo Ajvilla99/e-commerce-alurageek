@@ -1,12 +1,13 @@
 :root {
     /* --color-blue: #101b39;  */
-    --color-bg: #eee;
+    --color-bg: #F8F1F4;
     --color-bg-2 : #18314F;
     --bg-color-alt: #483407b0;
 
     --btn-color: #0b2536;
-    --font: 'Jost', sans-serif ;
-    --text-color: #271b00;
+    --font: 'Poppins', sans-serif ;
+    --text-color-blue: #18314F;
+    --text-bg-hover: #18314f57;
     --text-color-alt: #e8d9c8;
 }
 html {
@@ -22,7 +23,7 @@ body {
 
 
 
-.container__menu {
+/* .container__menu {
     display: flex;
     justify-content: center;
     height: 100px;
@@ -103,7 +104,7 @@ body {
 }
 .social__menu i{
     font-size: 24px;
-}
+} */
 
 /* section banner */
 
