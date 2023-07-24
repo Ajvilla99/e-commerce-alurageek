@@ -1,0 +1,16 @@
+.product__box {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+.product__title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.product__title h1 {
+    font-size: 40px;
+    font-family: var(--font);
+    text-transform: uppercase;
+}

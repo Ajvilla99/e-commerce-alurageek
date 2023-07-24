@@ -1,0 +1,27 @@
+:root {
+    /* --color-blue: #101b39;  */
+    --color-bg: #F8F1F4;
+    --color-bg-2 : #18314F;
+
+    --btn-color: #0b2536;
+    --font: 'Poppins', sans-serif ;
+    --text-color-blue: #18314F;
+    --text-bg-hover: #18314f57;
+    --text-color-alt: #fff;
+
+    --color-azul-claro: #00d0ff;
+
+    --btn-bg-blue: #18314F;
+    --btn-bg-white: #F8F1F4;
+    --btn-text-blue: #18314F;
+    --btn-text: #ffffff;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: var(--color-bg);
+    color: var(--text-color);
+    font-family: var(--font);
+    font-size: 16px;
+}
