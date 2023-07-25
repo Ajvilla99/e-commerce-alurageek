@@ -1,0 +1,30 @@
+@import url(../variables.css);
+
+.product__item {
+    position: relative;
+}
+
+.menu__product_main {
+    position: absolute;
+    top: 2.5%;
+    width: calc(100% - 10px);
+    height: 40px;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 2rem;
+    z-index: 999;
+}
+
+.menu__product_main a {
+    font-size: 30px;
+    width: 40px;
+    color: var(--color-azul-claro);    
+}
+.menu__product_main a i {
+    transition: .4s ease;
+}
+.menu__product_main a:hover i{
+    transform: scale(1.2);
+}

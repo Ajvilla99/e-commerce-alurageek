@@ -1,0 +1,49 @@
+@import url(../variables.css);
+
+.social__menu {
+    position: relative;
+    height: 45px;
+    border-radius: 50%;
+}
+.social__menu .menu__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-bg-2);
+    border-radius: 50%;
+}
+.social__menu a img {
+    width: 32px;
+    cursor: pointer;
+}
+
+
+.admin__list {
+    position: absolute;
+    display: none;
+}
+.active {
+    display: block;
+    top: 110%;
+    left: -220%;
+    background-color: var(--color-bg-2);
+    border-radius: 1rem;
+    padding: 1rem;
+    z-index: 999;
+    transition: .3s ease-in-out;
+}
+
+.admin__list .admin__item {
+    padding: 10px;
+}
+
+.admin__list .admin__item a {
+    color: var(--text-color-alt);
+    text-decoration: none;
+}
+
+.admin__list .admin__item a:hover {
+    color: var(--color-azul-claro);
+}
