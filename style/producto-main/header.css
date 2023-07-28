@@ -4,6 +4,7 @@
     position: relative;
     height: 45px;
     border-radius: 50%;
+    cursor: pointer;
 }
 .social__menu .menu__img {
     display: flex;
@@ -13,37 +14,70 @@
     height: 40px;
     background-color: var(--color-bg-2);
     border-radius: 50%;
+    margin-right: 6.3rem;
+    position: absolute;
+    z-index: 999;
+    right: 2%;
 }
 .social__menu a img {
     width: 32px;
     cursor: pointer;
+    z-index: 999;
 }
 
+.menu__datos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social__name {
+    display: flex;
+    background-color: #18314F60;
+    align-items: center;
+    justify-content: center;
+    height: 89%;
+    border-radius: 20px;
+    z-index: 100;
+    padding: 0 1rem 0 3rem;
+}
+
+.social__name__span {
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: .8px;
+}
+
+.admin__interaction {
+    position: absolute;
+    top: 99%;
+    width: 100%;
+    min-width: 145px;
+    display: none;
+    transition: .2s ease;
+}
+
+.social__menu .active {
+    display: inline-block;
+}
 
 .admin__list {
-    position: absolute;
-    display: none;
-}
-.active {
-    display: block;
-    top: 110%;
-    left: -220%;
+    border-radius: 10px;
     background-color: var(--color-bg-2);
-    border-radius: 1rem;
-    padding: 1rem;
-    z-index: 999;
-    transition: .3s ease-in-out;
+    width: 100%;
+    padding: .5rem 0;
 }
 
-.admin__list .admin__item {
-    padding: 10px;
-}
-
-.admin__list .admin__item a {
+.admin__item {
+    padding: .8rem 1rem;
+    transition: .2s ease;
     color: var(--text-color-alt);
-    text-decoration: none;
 }
 
-.admin__list .admin__item a:hover {
+.admin__item:hover {
     color: var(--color-azul-claro);
+}
+
+.item__logout {
+    border-top: 1px solid var(--color-azul-claro);
 }
