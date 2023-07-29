@@ -1,0 +1,50 @@
+{
+  "users": [
+   {
+    "name": "admin",
+    "email": "admin@admin.com",
+    "password": "admin",
+    "id": "01"
+   }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Star Wars"
+    },
+    {
+      "id": "2",
+      "name": "Clothes"
+    },
+    {
+      "id": "3",
+      "name": "Consolas"
+    }
+  ],
+  "products": [
+    {
+      "imageUrl": "../assets/img/producto.png",
+      "name": "stormtrooper",
+      "price": "10.00",
+      "categoria": "Star Wars",
+      "description": "Este juguete presenta un diseño meticuloso y auténtico, con todos los detalles que hacen que los Stormtroopers sean reconocibles al instante. Desde el casco blanco icónico hasta la armadura completa, cada parte está cuidadosamente recreada para capturar la esencia del personaje.",
+      "id": ""
+    },
+    {
+      "imageUrl": "../assets/img/producto-ropa.png",
+      "name": "camisa unisex",
+      "price": "50.00",
+      "categoria": "Star Wars",
+      "description": "Esta camisa unisex negra es una combinación perfecta de estilo y comodidad, diseñada para adaptarse a cualquier ocasión y para ser usada por cualquier persona, sin importar su género. Con un toque moderno y versátil, esta prenda se convertirá en tu favorita para lucir a la moda y sentirte cómodo(a) en cualquier momento del día.",
+      "id": ""
+    },
+    {
+      "imageUrl": "../assets/img/product__console.png",
+      "name": "PlayStation 5",
+      "price": "499.00",
+      "categoria": "Star Wars",
+      "description": "Sticker",
+      "id": ""
+    }
+  ]
+}
