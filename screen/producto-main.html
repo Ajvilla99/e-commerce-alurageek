@@ -13,7 +13,6 @@
     <!-- menu -->
     <link rel="stylesheet" href="../style/header/header.css">
     <link rel="stylesheet" href="../style/producto-main/header.css">
-
     <!-- product -->
     <link rel="stylesheet" href="../style/product/product.css">
     <link rel="stylesheet" href="../style/product/product-box.css">
@@ -82,7 +81,7 @@
                         </h1>
                         <div class="btn__box">
                             <a class="btn__plus add__product">
-                                Añadir producto
+                                Nuevo producto
                                 <i class='bx bx-plus'></i>
                             </a>
                         </div>
@@ -103,7 +102,16 @@
                                     <span class="discount"> [DESCUENTO]</span>
                                 </div>
                             </div>
-
+                            <div class="product__shop">
+                                    <div class="count int__shop" href="#">
+                                        <i class='bx bx-chevron-left arrow' ></i>
+                                        <span>0</span>
+                                        <i class='bx bx-chevron-right arrow' ></i>
+                                    </div>
+                                    <div class="add__cart int__shop" href="#">
+                                        <i class="fa-solid fa-cart-plus"></i>
+                                    </div>
+                                </div>
                             <div class="menu__product_main">
                                 <span class="action action__edit">
                                     <a class="product__edit">
@@ -127,8 +135,7 @@
     <footer>
         <p>Copyright &copy - 2023 by Abrahan Villa | All Rights Reserved.</p>
     </footer>
-    <script src="../product-main.js"></script>
+    <script type="module" src="../controllers/product/product-controller.js"></script>
     <script src="https://kit.fontawesome.com/fb879c3fc1.js" crossorigin="anonymous"></script>
-    <script src="../controllers/product/product-app.js"></script>
 </body>
 </html>

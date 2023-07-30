@@ -1,7 +1,11 @@
+import { clientServices } from "../../services/product-services.js";
+import { actionMenu } from "./product-action.js";
+
+actionMenu()
 
 const productList = document.querySelector('[data-product]');
 const btnAddProduct = document.querySelector('.add__product');
-function crearProducto(name, price, url) {
+export function crearProducto(name, price, url) {
     const content = `
         <div class="product__img">
             <img class="product__img__card" 
@@ -42,7 +46,6 @@ function crearProducto(name, price, url) {
     editElement.addEventListener('click', () => {
         
     })
-
     const deleteElement = newElement.querySelector('#action__trash');
     deleteElement.addEventListener('click', () => {
         newElement.remove()
@@ -51,25 +54,10 @@ function crearProducto(name, price, url) {
 
 btnAddProduct.addEventListener('click', crearProducto)
 
-
-const http = new XMLHttpRequest();
-
-// Abriendo http (metodo, url)
-// CRUD - Metodos HTTP
-// Create - Post 
-// Read - GET
-// Update PUT/PATCH
-// Delete - DELETE
-
-console.log(http);
-http.open('GET', "http://localhost:3000/products");
-
-http.send()
-
-http.onload = () => {
-    const data = JSON.parse(http.response)
-    data.forEach((products) => {
-        newElement = crearProducto(products.name, products.price, products.imageUrl)
-    });
-    console.log(data);
-}
+clientServices.producto()
+    .then((data) => {
+        data.forEach((product) => {
+            const newElement = crearProducto(product.name, product.price, product.imageUrl)
+        })
+    })
+    .catch((error) => alert("Se ah producido un error"));

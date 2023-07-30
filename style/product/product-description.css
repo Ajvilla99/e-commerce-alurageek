@@ -5,7 +5,7 @@
     gap: 5px;
 }
 .product__description .name__description {
-    font-size: 24px;
+    font-size: 16px;
     color: var(--text-color-alt);
 }
 .product__description .product__price {
@@ -14,13 +14,13 @@
     gap: 5px;
 }
 .product__description .product__price .price {
-    font-size: 22px;
+    font-size: 20px;
     color: var(--text-color-alt);
 }
 .product__description .product__price .discount {
     display: flex;
     align-items: center;
-    font-size: 16px;
+    font-size: 14px;
     color: var(--color-azul-claro);
     text-transform: uppercase;
 }

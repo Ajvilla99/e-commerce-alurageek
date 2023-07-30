@@ -3,7 +3,7 @@
    {
     "name": "admin",
     "email": "admin@admin.com",
-    "password": "admin",
+    "password": "admin123",
     "id": "01"
    }
   ],
@@ -33,8 +33,8 @@
     {
       "imageUrl": "../assets/img/producto-ropa.png",
       "name": "camisa unisex",
-      "price": "50.00",
-      "categoria": "Star Wars",
+      "price": "22.99",
+      "categoria": "clothes",
       "description": "Esta camisa unisex negra es una combinación perfecta de estilo y comodidad, diseñada para adaptarse a cualquier ocasión y para ser usada por cualquier persona, sin importar su género. Con un toque moderno y versátil, esta prenda se convertirá en tu favorita para lucir a la moda y sentirte cómodo(a) en cualquier momento del día.",
       "id": ""
     },
@@ -44,6 +44,33 @@
       "price": "499.00",
       "categoria": "Star Wars",
       "description": "Sticker",
+      "id": ""
+    },
+    {
+      "imageUrl": "../assets/img/dark blade lego.png",
+      "name": "Darth Vader",
+      "price": "125.00",
+      "categoria": "Star Wars",
+      "description": "¡Presentamos el emocionante juguete 'Darth Vader LEGO'! Este fascinante set combina la icónica figura de Darth Vader, el misterioso y poderoso villano de Star Wars, con la divertida y creativa experiencia de construir con LEGO.",
+      "discount": 25,
+      "id": ""
+    },
+    {
+      "imageUrl": "../assets/img/camisa-azul.png",
+      "name": "Camisa tipo polo",
+      "price": "22.50",
+      "categoria": "clothes",
+      "description": "",
+      "discount": 25,
+      "id": ""
+    },
+    {
+      "imageUrl": "../assets/img/producto-ropa-1.png",
+      "name": "Camisa tipo polo",
+      "price": "22.99",
+      "categoria": "clothes",
+      "description": "",
+      "discount": 25,
       "id": ""
     }
   ]
