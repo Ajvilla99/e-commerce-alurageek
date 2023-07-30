@@ -1,1 +1,183 @@
 @import url(../variables.css);
+
+body {
+    background-image: url(../../assets/img/florian-olivo-4hbJ-eymZ1o-unsplash.jpg);
+    backdrop-filter: blur(.5rem);
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #111111bd;
+}
+
+.form__modal {
+    width: 80%;
+    height: 80%;
+    background-color: var(--color-bg);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.form__modal label {
+    color: var(--text-color-blue);
+}
+.form__modal input:focus {
+    outline-color: #18314F80;
+}
+
+.modal__title {
+    position: absolute;
+    top: 5%;
+}
+
+.title {
+    font-size: 22px;
+}
+
+.modal__title .modal__span__title {
+    font-size: 30px;
+    font-family: var(--font);
+    font-weight: 500;
+    color: var(--text-color-blue);
+}
+
+.input__box {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.box__column {
+    flex-direction: column;
+    gap: 1.5rem;
+    height: 100%;
+}
+
+.modal__input__box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.modal__input__box input {
+    width: 70%;
+    height: 40px;
+    border: none;
+    border-radius: 6px;
+    background-color: #fefefe;
+    font-size: 18px;
+    color: var(--text-color-blue);
+    text-indent: 20px;
+}
+
+
+#box__description {
+    height: 30%;
+}
+#box__description textarea {
+    resize: none;
+    border-radius: 8px;
+    border: none;
+    height: 100%;
+    width: 70%;
+    padding-top: 10px;
+    text-indent: 20px;
+    font-size: 18px;
+    font-family: var(--font);
+}
+
+.box__discount .checkbox {
+    width: 25px;
+    height: 25px;
+    border: none;
+}
+
+.modal__check {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.modal__check .discount{
+    border: none;
+    width: 30;
+    height: 40px;
+    border-radius: 6px;
+    background-color: #fefefe;
+}
+
+.box__discount {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+    height: 100%;
+    gap: 10px;
+}
+
+.input__file {
+    display: none;
+}
+/* button */
+.btn {
+    border-radius: 8px;
+    padding: 10px;
+    border: none;
+    font-family: var(--font);
+    font-size: 18px;
+    cursor: pointer;
+    transition: .3s ease;
+    background-color: var(--color-bg);
+    border: 2px solid;
+    color: var(--text-color-blue);
+}
+
+.btn:hover {
+    background-color: var(--color-bg);
+    border: 2px solid;
+    color: var(--btn-bg-white);
+    background-color: var(--color-bg-2);
+    transform: scale(1.1);
+}
+/* img */
+
+.modal__img {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.box__img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 57%;
+    gap: 1.5rem;
+}
+
+.add__img {
+    width: 40%;
+    height: 60%;
+    border: 2px dashed var(--color-bg-2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    cursor: pointer;
+}
