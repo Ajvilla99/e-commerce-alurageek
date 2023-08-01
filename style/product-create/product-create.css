@@ -1,17 +1,22 @@
 @import url(../variables.css);
 
-body {
-    background-image: url(../../assets/img/florian-olivo-4hbJ-eymZ1o-unsplash.jpg);
-    backdrop-filter: blur(.5rem);
+.modal__box {
+    transform: translateY(-100vh);
 }
 
-main {
-    width: 100%;
+.active__modal {
+    top: 0;
+    left: 0;
+    width: 100vw;
     height: 100vh;
+    position: fixed;
+    background-color: #11111183;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #111111bd;
+    z-index: 999;
+    transform: translateY(0);
+    transition: .5s ease;
 }
 
 .form__modal {
@@ -22,8 +27,17 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    position: absolute;
+    /* pointer-events: none; */
+    /* opacity: 0; */
+    transition: .5s ease;
+    z-index: 999;
 }
+
+/* .form__modal__show {
+    opacity: 1;
+    pointer-events: all;
+} */
 
 .form__modal label {
     color: var(--text-color-blue);
@@ -138,11 +152,11 @@ main {
     border: none;
     font-family: var(--font);
     font-size: 18px;
+    border: 2px solid var(--color-bg-2);
+    background-color: var(--color-bg);
+    color: var(--text-color-blue);
     cursor: pointer;
     transition: .3s ease;
-    background-color: var(--color-bg);
-    border: 2px solid;
-    color: var(--text-color-blue);
 }
 
 .btn:hover {
@@ -171,13 +185,29 @@ main {
 }
 
 .add__img {
-    width: 40%;
+    width: 30%;
     height: 60%;
     border: 2px dashed var(--color-bg-2);
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 100px;
+    font-size: 160px;
     cursor: pointer;
+    color: var(--text-color-blue);
+    background-color: #18314f41;
+    text-decoration: none;
+}
+
+.btn_modal {
+    border-radius: 8px;
+    padding: 10px;
+    border: none;
+    font-family: var(--font);
+    font-size: 18px;
+    border: 2px solid var(--color-bg-2);
+    background-color: var(--color-bg);
+    color: var(--text-color-blue);
+    cursor: pointer;
+    transition: .3s ease;
 }

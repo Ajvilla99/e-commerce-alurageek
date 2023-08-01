@@ -12,7 +12,6 @@ export function crearProducto(name, price, url) {
             src="${url}" 
             alt="Imagen Producto">
         </div>
-
         <div class="product__description">
             <div class="name__description">
                 <p>${name}</p>
@@ -24,7 +23,6 @@ export function crearProducto(name, price, url) {
                 <span class="discount">% off</span>
             </div>
         </div>
-
         <div class="menu__product_main">
             <span class="action action__edit" >
                 <a class="product__edit" id="action__edit">
@@ -44,7 +42,6 @@ export function crearProducto(name, price, url) {
 
     const editElement = newElement.querySelector('#action__edit');
     editElement.addEventListener('click', () => {
-        
     })
     const deleteElement = newElement.querySelector('#action__trash');
     deleteElement.addEventListener('click', () => {
@@ -52,12 +49,15 @@ export function crearProducto(name, price, url) {
     })
 }
 
-btnAddProduct.addEventListener('click', crearProducto)
+const modal = document.querySelector('.modal__box')
+btnAddProduct.addEventListener('click', () => {
+    modal.classList.add('active__modal')
+})
 
 clientServices.producto()
     .then((data) => {
         data.forEach((product) => {
-            const newElement = crearProducto(product.name, product.price, product.imageUrl)
+            crearProducto(product.name, product.price, product.url)
         })
     })
-    .catch((error) => alert("Se ah producido un error"));
+    .catch((error) => console.log(error));

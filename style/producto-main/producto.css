@@ -27,7 +27,7 @@ main {
     justify-content: flex-end;
     align-items: flex-end;
     gap: 1.5rem;
-    z-index: 999;
+    z-index: 100;
 }
 
 .menu__product_main a {
