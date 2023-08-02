@@ -7,25 +7,25 @@
     <link rel="icon" href="../assets/img/logo-e-commerce.png"> 
     <title>ecommerce</title>
     <!-- stylesheets -->
-    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="../style/reset/reset.css">
     <link rel="stylesheet" href="../style/variables.css">
     <link rel="stylesheet" href="../style/btn.css">
     <!-- menu -->
+    <link rel="stylesheet" href="../style/product-create/header.css">
     <link rel="stylesheet" href="../style/header/header.css">
-    <link rel="stylesheet" href="../style/producto-main/header.css">
     <!-- product -->
     <link rel="stylesheet" href="../style/product/product.css">
     <link rel="stylesheet" href="../style/product/product-box.css">
     <link rel="stylesheet" href="../style/product/product-list.css">
     <link rel="stylesheet" href="../style/product/product-img.css">
     <link rel="stylesheet" href="../style/product/product-description.css">
+    <link rel="stylesheet" href="../style/product/product-create.css">
     <!-- Producto admin -->
-    <link rel="stylesheet" href="../style/producto-main/producto.css">
+    <link rel="stylesheet" href="../style/product-create/producto.css">
     <!-- footer -->
     <link rel="stylesheet" href="../style/footer.css">
 
     <!-- external -->
-    <link rel="stylesheet" href="../style/product-create/product-create.css">
 
     <!-- link externals -->
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;500;900&display=swap" rel="stylesheet">
@@ -38,7 +38,7 @@
                 <div class="menu__left">
                     <div class="logo">
                         <a href="../index.html">
-                            <img src="../assets/img/Logo.png" alt="Logo">
+                            <img src="../assets/img/logos/Logo.png" alt="Logo">
                         </a>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
                     <div class="social__menu">
                         <div class="menu__datos">
                         <a class="menu__img">
-                            <img src="../assets/img/Admin-Profile-Vector-PNG-Image.png" alt="">
+                            <img src="../assets/img/usuarios/Admin-Profile-Vector-PNG-Image.png" alt="">
                         </a>
                         <div class="social__name">
                             <span class="social__name__span">Admin</span>
@@ -74,8 +74,7 @@
     </header>
 
     <main id="main">
-        <section class="product" id="product" >
-            
+        <section class="product" id="product" >      
             <div class="modal__box">
                 <form class="form__modal" data-form>
                 <div class="modal__title">
@@ -87,7 +86,7 @@
                     </div>
                     <div class="box__img" id="img" >
                         <a class="add__img">
-                            <img src="../assets/img/file.png" alt="" width="200px" data-img>
+                            <img src="../assets/img/icon/file.png" alt="" width="200px" data-img>
                         </a>
     
                         <input placeholder="" class="modal__input input__file" id="input__file" type="file" data-file>
@@ -117,16 +116,14 @@
                 </div>
                 </form>
             </div>
-
             <div class="product__container" >
-                
                 <section class="product__toys product__box">
                     <div class="product__title">
                         <h1>
                             Todos los productos
                         </h1>
                         <div class="btn__box">
-                            <a class="btn__plus add__product">
+                            <a class="btn__plus create__product">
                                 Nuevo producto
                                 <i class='bx bx-plus'></i>
                             </a>
@@ -181,9 +178,8 @@
     <footer>
         <p>Copyright &copy - 2023 by Abrahan Villa | All Rights Reserved.</p>
     </footer>
+    <script type="module" src="../javascript/app/app-product.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script type="module" src="../controllers/product/app.js"></script>
-    <script type="module" src="../controllers/product/product-controller.js"></script>
     <script src="https://kit.fontawesome.com/fb879c3fc1.js" crossorigin="anonymous"></script>
 </body>
 </html>

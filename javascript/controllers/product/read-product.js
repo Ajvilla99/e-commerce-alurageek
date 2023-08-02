@@ -1,13 +1,13 @@
-const productList = document.querySelector('[data-product]');
-const btnAddProduct = document.querySelector('.add__product');
-export function crearProducto(name, price, url) {
+import { clientServices } from "../../services/product-services.js";
+
+export function readProduct(name, price, url) {
+    const products = document.querySelector('[data-product]');
     const content = `
         <div class="product__img">
-            <img class="product__img__card" 
+            <img class="product__img__card" id="img__product"
             src="${url}" 
             alt="Imagen Producto">
         </div>
-
         <div class="product__description">
             <div class="name__description">
                 <p>${name}</p>
@@ -19,7 +19,6 @@ export function crearProducto(name, price, url) {
                 <span class="discount">% off</span>
             </div>
         </div>
-
         <div class="menu__product_main">
             <span class="action action__edit" >
                 <a class="product__edit" id="action__edit">
@@ -35,17 +34,21 @@ export function crearProducto(name, price, url) {
     const newElement = document.createElement("li");
     newElement.classList.add('product__item');
     newElement.innerHTML = content
-    productList.appendChild(newElement);
+    products.appendChild(newElement);
 
     const editElement = newElement.querySelector('#action__edit');
     editElement.addEventListener('click', () => {
-        
     })
-
     const deleteElement = newElement.querySelector('#action__trash');
     deleteElement.addEventListener('click', () => {
         newElement.remove()
     })
 }
 
-btnAddProduct.addEventListener('click', crearProducto)
+clientServices.producto()
+    .then((data) => {
+        data.forEach((product) => {
+            readProduct(product.name, product.price, product.url)
+        })
+    })
+    .catch((error) => console.log(error));

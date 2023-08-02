@@ -27,5 +27,27 @@
       "name": "Consolas"
     }
   ],
-  "products": []
+  "products": [
+    {
+      "name": "Star Wars Lego",
+      "description": "asdasd",
+      "price": "21.00",
+      "url": "/eccomerce/assets/img/star wars/dark blade lego.png",
+      "id": "4895002f-3a39-460b-8994-c1d0124dab66"
+    },
+    {
+      "name": "123",
+      "description": "1231",
+      "imageUrl": "http://127.0.0.1:5500/eccomerce/assets/img/usuarios/Admin-Profile-Vector-PNG-Image.png",
+      "price": "1231",
+      "id": "3a2e9717-05f8-4618-935f-84c837bc6de3"
+    },
+    {
+      "name": "12",
+      "description": "1213",
+      "imageUrl": "http://127.0.0.1:5500/eccomerce/assets/img/star%20wars/dark%20blade%20lego.png",
+      "price": "1213",
+      "id": "51e48724-d0cf-46cd-bb1e-3205e6825d4f"
+    }
+  ]
 }

@@ -16,13 +16,13 @@ const createUser = (name, email, password) => {
     })
 }
 
-const crearProducto = (name, description, price, url = "") => {
+const crearProducto = (name, description, imageUrl ,price) => {
     return fetch("http://localhost:3000/products", {
         method: "POST",
         headers: {
             "content-type": "application/json"
         },
-        body: JSON.stringify({name, description, price, url, id:uuid.v4()})
+        body: JSON.stringify({name, description, imageUrl, price, id:uuid.v4()})
 
     })
 }
