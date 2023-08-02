@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../assets/img/logo-e-commerce.png">
-    <title>Login | iniciar sesion</title>
+    <title>Login | Sing Up</title>
     <!-- stylesheets -->
-    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="../style/reset/reset.css">
     <link rel="stylesheet" href="../style/login/form.css">
     <!-- link externals -->
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;500;900&display=swap" rel="stylesheet">
@@ -15,32 +15,26 @@
 </head>
 <body> 
     <main>
-        <!-- <div class="button__back">
-            <a href="../index.html">
-                <span>Inicio <i class='bx bx-x'></i></span>
-            </a>
-        </div> -->
         <div class="container">
             <div class="box">
                 <div class="form sign_in">
                     <h3>Iniciar sesión</h3>
-                    <span></span>
-    
-                    <form action="login.html" class="form_input" id="form__login">
+
+                    <form action="" class="form_input" id="form__login" data-form>
                         <div class="type input__invalid">
                             <span class="span__form" id="message__error"><i class='bx bxs-error-circle'></i> Correo o contraseña incorrectos.</span>
                             <input type="email" 
                             placeholder="Correo electronico" 
                             name="" 
                             id="login-email"
-                            data-tipo="email">
+                            data-email>
                         </div>
                         <div class="type">
                             <input type="password" 
                                 placeholder="Contraseña" 
                                 name="" 
                                 id="login-password"
-                                data-tipo="password">
+                                data-password>
                         </div>
                         <div class="forgot">
                             <span>¿Olvidaste tu contraseña?</span>
@@ -49,40 +43,28 @@
                         <button type="submit" class="btn bkg" id="submit__log">Iniciar sesion</button>
                     </form>
                 </div>
-        
                 <div class="form sign_up">
                     <h3>Crear cuenta</h3>
                     <span></span>
-    
-                    <form action="#" class="form_input">
+                    <form class="form_input" id="form__singup">
                         <div class="type">
-                            <input type="text"
-                                name="" 
-                                placeholder="Nombre*" 
-                                id="name" 
-                                required
-                                data-tipo="nombre">
+                            <input type="text" id="name__singup" name="" placeholder="Nombre*" required >
                         </div>
                         <div class="type">                            
-                            <input type="email"
-                                name="" 
-                                placeholder="Correo electronico*" 
-                                id="email" 
-                                required
-                                data-tipo="email">
+                            <input type="email" id="email__singup" placeholder="Correo electronico*"  required>
                         </div>
                         <div class="type">    
                             <input type="password"
                                 name="" 
                                 placeholder="Contraseña*" 
-                                id="password" 
+                                id="password__singup" 
                                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                                 title="Debe contener 8 o más caracteres que sean al menos un número y una letra mayúscula y minúscula"
                                 required
                                 data-tipo="password">
                         </div>
     
-                        <button class="btn bkg">Crear cuenta</button>
+                        <input type="submit" class="btn bkg" value="Crear cuenta">
                     </form>
 
                     <span class="terminos__condiciones">Al crear una cuenta, aceptas los Términos, condiciones y la Política de privacidad.</span>
@@ -106,9 +88,12 @@
             </div>
         </div>
     </main>
-    <script src="../controllers/form-validation.js"></script>
-    <!-- <script src="../services/client-service.js"></script> -->
+    <!-- <script src="../controllers/form-validation.js"></script>
     <script src="../controllers/actions-login.js"></script>
+    <script type="module" src="../controllers/login.js"></script>
+    <script type="module" src="../controllers/registro.js"></script> -->
+    <script type="module" src="../controllers/"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://kit.fontawesome.com/fb879c3fc1.js" crossorigin="anonymous"></script>
 </body>
 </html>

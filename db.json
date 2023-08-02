@@ -5,6 +5,12 @@
       "email": "admin@admin.com",
       "password": "admin123",
       "id": "01"
+    },
+    {
+      "name": "abraham Villa",
+      "email": "prueba@prueba.com",
+      "password": "Prueba12345",
+      "id": "3958c717-76c6-4536-ac9f-4f8bb9c75dca"
     }
   ],
   "categories": [
@@ -21,6 +27,5 @@
       "name": "Consolas"
     }
   ],
-  "products": [
-  ]
+  "products": []
 }

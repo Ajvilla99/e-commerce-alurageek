@@ -7,8 +7,7 @@ form.addEventListener('submit', (evento) => {
     const name = document.querySelector('[data-name]').value;
     const description = document.querySelector('[data-description]').value;
     const price = document.querySelector('[data-price]').value;
-    
-    clientServices.crearProducto(name, description, price, img).then( respuesta => {
+    clientServices.crearProducto(name, description, price).then( respuesta => {
     })
     .catch(err => console.log(err));
 });
@@ -22,10 +21,10 @@ const imgUpload = document.querySelector('.add__img__button')
 file.addEventListener('change', (e) => {
     if( e.target.files[0] ) {
         const reader = new FileReader();
-        reader.onload = function( e ){
+        reader.onload = function(e){
             img.src = e.target.result
         }
-        reader.readAsDataURL(e.target.files[0])
+        reader.readAsDataURL(e.target.files[0]);
     }
 })
 img.addEventListener('click', () => {
