@@ -1,0 +1,92 @@
+@import url(../variables.css);
+
+.modal__alert {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 900;
+    opacity: 0;
+    transition: .4s ease;
+    pointer-events: none;
+}
+
+.modal__alert__show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.alert__child {
+    width: 500px;
+    height: 360px;
+    border-radius: .5rem;
+    background-color: var(--color-bg);
+}
+
+.alert__flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon__alert {
+    width: 100%;
+    height: 45%;
+}
+
+.icon__alert i {
+    text-align: center;
+    border-radius: 50%;
+    color: var(--btn-color);
+    font-size: 108px;
+}
+
+.alert__title {
+    width: 100%;
+}
+
+.alert__title h1 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.detalle__alert {
+    width: 100%;
+    height: 28%;
+}
+
+.alert__button {
+    width: 100%;
+    gap: 2rem;
+}
+
+.alert__button a {
+    text-decoration: none;
+    font-family: var(--font);
+    cursor: pointer;
+    width: 100px;
+    height: 45px;
+    border-radius: 6px;
+    transition: .3s ease;
+}
+
+.alert__button a:hover {
+    transform: translateY(-5%);
+    -webkit-box-shadow: 10px 10px 5px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px -3px rgba(0,0,0,0.75);
+    box-shadow: -5px 5px 5px -1px rgba(0,0,0,0.75);
+}
+
+.btn__false {
+    background-color: #18314F30;
+}
+.btn__true {
+    background-color: var(--btn-bg-blue);
+    color: var(--btn-bg-white);
+}

@@ -1,38 +1,39 @@
+@import url(variables.css);
+
 .banner__discount {
     position: absolute;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     width: 40%;
-    height: 90%;
+    height: 100%;
     color: #fff;
-}
-.banner__discount .discount__porcent {
-    width: 20%;
-    display: flex;
-    justify-content: center;
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: #fff;
-    background-color: var(--color-bg-2);
-    cursor: default;
-}
-.banner__discount .discount__porcent p {
-    padding: 5px;
-    cursor: default;
-}
-.banner__discount h1 {
-    font-size: 48px;
-    font-weight: 600;
+    justify-content: space-around;
     font-family: var(--font);
-    text-transform: uppercase;
-    cursor: default;
 }
-.discount__text {
-    padding-left: 20px;
-    line-height: 3;
+
+.discount__porcent {
+    width: 20%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-bg-2);
+    font-family: var(--font);
+    font-weight: 500;
+    text-indent: 10px;
 }
-.text__date__validation {
-    margin-top: 2rem;
+
+.date__promotional {
+    font-size: 3em;
+    font-weight: 600;
+    text-indent: 10px;
+}
+
+.btn__buy {
+    margin-left: 10px;
+}
+
+.date__validation {
+    margin-left: 10px;
+    font-size: 14px;
 }

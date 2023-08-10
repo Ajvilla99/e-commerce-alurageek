@@ -1,4 +1,4 @@
-@import url(../variables.css);
+/* @import url(../variables.css);
 
 .modal__box {
     transform: translateY(-100vh);
@@ -28,16 +28,9 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    /* pointer-events: none; */
-    /* opacity: 0; */
     transition: .5s ease;
     z-index: 999;
 }
-
-/* .form__modal__show {
-    opacity: 1;
-    pointer-events: all;
-} */
 
 .form__modal label {
     color: var(--text-color-blue);
@@ -145,7 +138,7 @@
 .input__file {
     display: none;
 }
-/* button */
+
 .btn {
     border-radius: 8px;
     padding: 10px;
@@ -166,7 +159,7 @@
     background-color: var(--color-bg-2);
     transform: scale(1.1);
 }
-/* img */
+
 
 .modal__img {
     display: flex;
@@ -185,8 +178,8 @@
 }
 
 .add__img {
-    width: 30%;
-    height: 60%;
+    max-width: 250px;
+    max-height: 420px;
     border: 2px dashed var(--color-bg-2);
     border-radius: 8px;
     display: flex;
@@ -197,6 +190,10 @@
     color: var(--text-color-blue);
     background-color: #18314f41;
     text-decoration: none;
+    overflow: hidden;
+}
+.add__img img {
+    object-fit: cover;
 }
 
 .btn_modal {
@@ -210,4 +207,4 @@
     color: var(--text-color-blue);
     cursor: pointer;
     transition: .3s ease;
-}
+}  */

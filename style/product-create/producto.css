@@ -49,3 +49,7 @@ main {
 .product__list {
     flex-wrap: wrap;
 }
+
+.custom-icon {
+    color: var(--color-azul-claro);
+}
