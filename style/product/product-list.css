@@ -1,6 +1,8 @@
 .product__list {
     display: flex;
     gap: 1rem;
+    width: 100%;
+    overflow-x: hidden;
 }
 .product__list .heart {
     position: absolute;

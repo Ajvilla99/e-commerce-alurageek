@@ -25,6 +25,8 @@
     <!-- modal -->
     <link rel="stylesheet" href="./../style/modal/modal.css">
     <link rel="stylesheet" href="../style/modal/modal-alert.css">
+    <link rel="stylesheet" href="../style/modal/modal-category.css">
+    <link rel="stylesheet" href="../style/modal/category-edit.css">
     <!-- footer -->
     <link rel="stylesheet" href="../style/footer.css">
 
@@ -75,203 +77,216 @@
             </div>
         </div>
     </header>
-    <div class="modal__alert">
-        <div class="alert__child">
-            <div class="icon__alert alert__flex">
-                <i class='bx bxs-error'></i>
-            </div>
-            <div class="alert__title alert__flex">
-                <h1>Eliminar Producto</h1>
-            </div>
-            <div class="detalle__alert alert__flex">
-                <span class="detalle__span">¿Desea eliminar el producto de forma permanente?</span>
-            </div>
-            <div class="alert__button alert__flex">
-                <a class="btn__alert btn__false alert__flex">
-                    Mantener
-                </a>
-                <a class="btn__alert btn__true alert__flex">
-                    Eliminar
-                </a>
+    <div>
+        <div class="modal__alert">
+            <div class="alert__child">
+                <div class="icon__alert alert__flex">
+                    <i class='bx bxs-error'></i>
+                </div>
+                <div class="alert__title alert__flex">
+                    <h1 class="title__delete">Eliminar Producto</h1>
+                </div>
+                <div class="detalle__alert alert__flex">
+                    <span class="detalle__span">¿Desea eliminar el producto de forma permanente?</span>
+                </div>
+                <div class="alert__button alert__flex">
+                    <a class="btn__alert btn__false alert__flex">
+                        Mantener
+                    </a>
+                    <a class="btn__alert btn__true alert__flex">
+                        Eliminar
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
+        
+        <div class="modal category__edit">
+            <div class="modal__conten">
+                <form class="form__category" id="fomr__edit__category">
+                    <div class="category__input__box category__box">
+                        <input class="category__input edit__category__name" type="text" placeholder="Nombre de la categoria" required>
+                    </div>
+                    <span class="category__message"></span>
+                    <div class="category__button__box category__box">
+                        <input class="category__button edit__category__close" id="close__category" type="button" value="Cancelar">
+                        <input class="category__button edit__category__create" id="" type="submit" value="Editar categoria">
+                    </div>
+                </form>
+            </div>
+        </div>
 
+        <div class="modal__category create__category">
+            <div class="modal__content">
+                <form class="form__category" data-category>
+                    <div class="category__input__box category__box">
+                        <input class="category__input category__create-name" type="text" placeholder="Nombre de la categoria" required>
+                    </div>
+                    <span class="category__message"></span>
+                    <div class="category__button__box category__box">
+                        <input class="category__button category__close" type="button" value="Cancelar">
+                        <input class="category__button category__create" type="submit" value="Crear categoria">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="modal modal__ed">
+            <form class="form__edit form__modal" id="form__edit" data-edit>
+                <!-- boton de cerrar -->
+                <div class="close__modal close__modal__ed">
+                    <a class="btn__close">
+                        <i class='bx bx-x'></i>
+                    </a>
+                </div>
+                <div class="form__title">
+                    <span>Editar Producto</span>
+                </div>
+                <div class="form__aside aside__left">
+                    <div class="title__aside  aside__tb">
+                        <span>Seleccionar imagen</span>
+                    </div>
+                    <div class="aside__img aside__middle">
+                        <div class="modal__img">
+                            <img src="../assets/img/icon/file.png" class="img__view__ed" id="view-ed" alt="imagen seleccionada" data-tipo="img-view">
+                        </div>
+                    </div>
+                    
+                    <div class="add__img__box aside__tb">
+                        <input type="file" class="aside__file" data-tipo="file">
+                        <input type="button" value="Seleccionar imagen" class="btn  add__button">
+                    </div>
+                </div>
+                <div class="form__aside aside__box-input">
+                    <div class="title__aside edit__title-right aside__tb">
+                        <span>Datos del producto</span>
+                    </div>
+                    <div class="aside__input__box aside__middle">
+                        <div class="aside__input aside__datos">
+                            <input placeholder="Nombre del producto" type="text" class="edit__name" data-tipo="nombre-edit" required>
+                        </div>
+                        <div class="aside__input aside__datos">
+                            <textarea placeholder="Descripciòn" name="" id="" data-tipo="description-edit" required></textarea>
+                        </div>
+                        <div class="aside__input aside__price">
+                            <input placeholder="Precio del producto" type="text" class="edit__price" data-tipo="price-edit" required>
+                        </div>
+                        <div class="aside__input aside__category">
+                            <select id="select__category select__ed" class="select__category" data-tipo="category-ed" required>
+                                <option value="Categoria">Categoria</option>
+                                <option value="StarWars">Star Wars</option>
+                                <option value="Clothes">Ropa</option>
+                                <option value="Consolas">Consolas</option>
+                            </select>
+                        </div>
+                    </div> 
+                    <div class="aside__tb">
+                        <input type="submit" class="btn" value="Guardar cambios">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="modal modal__cr">
+            <form class="form__edit form__modal" id="form__edit" data-create>
+                <!-- boton de cerrar -->
+                <div class="close__modal close__modal-cr">
+                    <a class="btn__close btn__close-cr">
+                        <i class='bx bx-x'></i>
+                    </a>
+                </div>
+                <div class="form__title">
+                    <span>Crear Producto</span>
+                </div>
+                <div class="form__aside aside__left">
+                    <div class="title__aside  aside__tb">
+                        <span>Seleccionar imagen</span>
+                    </div>
+                    <div class="aside__img aside__middle">
+                        <div class="modal__img">
+                            <img src="../assets/img/icon/file.png" class="view__cr" alt="imagen seleccionada" data-tipo="view-cr">
+                        </div>
+                    </div>
+                    
+                    <div class="add__img__box aside__tb">
+                        <input type="file" class="aside__file" id="file-cr" data-tipo="file-img">
+                        <input type="button" value="Seleccionar imagen" class="btn  add__button-cr">
+                    </div>
+                </div>
+                <div class="form__aside aside__box-input aside__right">
+                    <div class="title__aside edit__title-right aside__tb">
+                        <span>Datos del producto</span>
+                    </div>
+                    <div class="aside__input__box aside__middle">
+                        <div class="aside__input aside__datos">
+                            <input placeholder="Nombre del producto" type="text" class="edit__name" data-tipo="name-cr" required>
+                        </div>
+                        <div class="aside__input aside__datos">
+                            <textarea placeholder="Descripciòn" name="" id="" data-tipo="description-cr" required></textarea>
+                        </div>
+                        <div class="aside__input aside__price">
+                            <input placeholder="Precio del producto" type="number" step="any" class="price-cr" data-tipo="price-cr" required>
+                        </div>
+                        <div class="aside__input aside__category">
+                            <select id="select__category select__ed" class="select__category" data-tipo="category-cr" required>
+                                <option value="">Categoria</option>
+                                <option value="starwars">Star Wars</option>
+                                <option value="ropa">Ropa</option>
+                                <option value="consolas">Consolas</option>
+                            </select>
+                        </div>
+                    </div> 
+                    <div class="aside__tb">
+                        <input type="submit" class="btn" value="Crear producto">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
     <main id="main">
         <section class="product" id="product" >
-
-            
-            <div class="modal modal__ed">
-                <form class="form__edit form__modal" id="form__edit" data-edit>
-                    <!-- boton de cerrar -->
-                    <div class="close__modal close__modal__ed">
-                        <a class="btn__close">
-                            <i class='bx bx-x'></i>
-                        </a>
-                    </div>
-                    <div class="form__title">
-                        <span>Editar Producto</span>
-                    </div>
-                    <div class="form__aside aside__left">
-                        <div class="title__aside  aside__tb">
-                            <span>Seleccionar imagen</span>
-                        </div>
-                        <div class="aside__img aside__middle">
-                            <div class="modal__img">
-                                <img src="../assets/img/icon/file.png" class="img__view__ed" id="view-ed" alt="imagen seleccionada" data-tipo="img-view">
-                            </div>
-                        </div>
-                        
-                        <div class="add__img__box aside__tb">
-                            <input type="file" class="aside__file" data-tipo="file">
-                            <input type="button" value="Seleccionar imagen" class="btn  add__button">
-                        </div>
-                    </div>
-                    <div class="form__aside aside__box-input">
-                        <div class="title__aside edit__title-right aside__tb">
-                            <span>Datos del producto</span>
-                        </div>
-                        <div class="aside__input__box aside__middle">
-                            <div class="aside__input aside__datos">
-                                <input placeholder="Nombre del producto" type="text" class="edit__name" data-tipo="nombre-edit" required>
-                            </div>
-                            <div class="aside__input aside__datos">
-                                <textarea placeholder="Descripciòn" name="" id="" data-tipo="description-edit" required></textarea>
-                            </div>
-                            <div class="aside__input aside__price">
-                                <input placeholder="Precio del producto" type="text" class="edit__price" data-tipo="price-edit" required>
-                            </div>
-                            <div class="aside__input aside__category">
-                                <select id="select__category select__ed" class="select__category" data-tipo="category-ed" required>
-                                    <option value="Categoria">Categoria</option>
-                                    <option value="StarWars">Star Wars</option>
-                                    <option value="Clothes">Ropa</option>
-                                    <option value="Consolas">Consolas</option>
-                                </select>
-                            </div>
-                        </div> 
-                        <div class="aside__tb">
-                            <input type="submit" class="btn" value="Guardar cambios">
-                        </div>
-                    </div>
-                </form>
+            <div class="product__title">
+                <div class="btn__box">
+                    <button class="test">
+                        TEST
+                        <i class='bx bx-plus'></i>
+                    </button>
+                    <a class="btn__plus create__category" id="create__category">
+                        Nueva categoria
+                        <i class='bx bx-plus'></i>
+                    </a>
+                    <a class="btn__plus create__product">
+                        Nuevo producto
+                        <i class='bx bx-plus'></i>
+                    </a>
+                </div>
             </div>
-            <!-- Modal Create -->
-            <div class="modal modal__cr">
-                <form class="form__edit form__modal" id="form__edit" data-create>
-                    <!-- boton de cerrar -->
-                    <div class="close__modal close__modal-cr">
-                        <a class="btn__close btn__close-cr">
-                            <i class='bx bx-x'></i>
-                        </a>
-                    </div>
-                    <div class="form__title">
-                        <span>Crear Producto</span>
-                    </div>
-                    <div class="form__aside aside__left">
-                        <div class="title__aside  aside__tb">
-                            <span>Seleccionar imagen</span>
-                        </div>
-                        <div class="aside__img aside__middle">
-                            <div class="modal__img">
-                                <img src="../assets/img/icon/file.png" class="view__cr" alt="imagen seleccionada" data-tipo="view-cr">
-                            </div>
-                        </div>
-                        
-                        <div class="add__img__box aside__tb">
-                            <input type="file" class="aside__file" id="file-cr" data-tipo="file-img">
-                            <input type="button" value="Seleccionar imagen" class="btn  add__button-cr">
-                        </div>
-                    </div>
-                    <div class="form__aside aside__box-input aside__right">
-                        <div class="title__aside edit__title-right aside__tb">
-                            <span>Datos del producto</span>
-                        </div>
-                        <div class="aside__input__box aside__middle">
-                            <div class="aside__input aside__datos">
-                                <input placeholder="Nombre del producto" type="text" class="edit__name" data-tipo="name-cr" required>
-                            </div>
-                            <div class="aside__input aside__datos">
-                                <textarea placeholder="Descripciòn" name="" id="" data-tipo="description-cr" required></textarea>
-                            </div>
-                            <div class="aside__input aside__price">
-                                <input placeholder="Precio del producto" type="number" class="price-cr" data-tipo="price-cr" required>
-                            </div>
-                            <div class="aside__input aside__category">
-                                <select id="select__category select__ed" class="select__category" data-tipo="category-cr" required>
-                                    <option value="">Categoria</option>
-                                    <option value="StarWars">Star Wars</option>
-                                    <option value="Clothes">Ropa</option>
-                                    <option value="Consolas">Consolas</option>
-                                </select>
-                            </div>
-                        </div> 
-                        <div class="aside__tb">
-                            <input type="submit" class="btn" value="Crear producto">
-                        </div>
-                    </div>
-                </form>
-            </div>
-
-            <div class="product__container" >
-                <section class="product__toys product__box">
-                    <div class="product__title">
-                        <h1>
+            <div class="all__categories" id="all__categories">
+                <section class="product__list_box">
+                    <div class="head__category">
+                        <h1 class="title__category">
                             Todos los productos
                         </h1>
-                        <div class="btn__box">
-                            <a class="btn__plus create__product">
-                                Nuevo producto
-                                <i class='bx bx-plus'></i>
-                            </a>
-                            <a class="btn__plus create__category">
-                                Nueva categoria
-                                <i class='bx bx-plus'></i>
-                            </a>
-                        </div>
+                        <a class="btn__category">
+                            ver mas
+                            <i class='bx bx-plus'></i>
+                        </a>
                     </div>
-                    <ol class="product__list" data-product>
-                        <!-- PRODUCTO -->
-                        <!-- <li class="product__item">
-                            <div class="product__img" data-img>
-                                <img class="product__img__card" src="../assets/img/producto.png" alt="">
-                            </div>
-
-                            <div class="product__description">
-                                <div class="name__description">
-                                    <p>[NOMBRE]</p>
-                                </div>
-                                <div class="product__price">
-                                    <span class="price">$[PRECIO]</span>
-                                    <span class="discount"> [DESCUENTO]</span>
-                                </div>
-                            </div>
-                            <div class="product__shop">
-                                    <div class="count int__shop" href="#">
-                                        <i class='bx bx-chevron-left arrow' ></i>
-                                        <span>0</span>
-                                        <i class='bx bx-chevron-right arrow' ></i>
-                                    </div>
-                                    <div class="add__cart int__shop" href="#">
-                                        <i class="fa-solid fa-cart-plus"></i>
-                                    </div>
-                                </div>
-                            <div class="menu__product_main">
-                                <span class="action action__edit">
-                                    <a class="product__edit">
-                                        <i class='bx bxs-pencil'></i>
-                                    </a>
-                                </span class="action action__trash">
-                                <span>
-                                    <a class="product__trash">
-                                        <i class='bx bxs-trash'></i>
-                                    </a>
-                                </span>
-                            </div>
-                        </li> -->
+                    <ol class="product__list list__category" data-product>
                     </ol>
                 </section>
-                
+                <!-- <section class="product__list_box">
+                    <div class="head__category">
+                        <h1 class="title__category">
+                            Todos los productos
+                        </h1>
+                        <a class="btn__category">
+                            ver mas
+                            <i class='bx bx-plus'></i>
+                        </a>
+                    </div>
+                    <ol class="product__list">
+                    </ol>
+                </section> -->
             </div>
         </section>
     </main>

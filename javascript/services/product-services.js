@@ -6,7 +6,7 @@ const createUser = (name, email, password) => {
     return fetch("http://localhost:3000/users", {
         method: "POST",
         headers: {
-            "content-type": "application/json"
+            "content-type": "Application/JSON"
         },
         body: JSON.stringify({name, email, password, id:uuid.v4()})
     })
@@ -16,15 +16,39 @@ const category = () => {
     return fetch("http://localhost:3000/categories").then( response => response.json())
 }
 
-const createCategory = (name, description, ) => {
+const createCategory = (name) => {
     return fetch("http://localhost:3000/categories", {
         method: "POST",
         headers: {
             "content-type": "Application/JSON"
         },
-        body: JSON.stringify({name, description, id:uuid.v4()})
+        body: JSON.stringify({name, id:uuid.v4()})
 
     })
+}
+
+const editCategory = (id) => {
+    return fetch(`http://localhost:3000/categories/${id}`).then( response => response.json())
+}
+
+const updateCategory = (name, id) => {
+    return fetch(`http://localhost:3000/categories/${id}`, {
+        method: 'PUT',
+        headers: {"Content-Type": "Application/JSON"},
+        body: JSON.stringify({name, id}),
+    })
+        .then( response => response.json())
+        .catch((error) => error)
+}
+
+const deleteCategory = (id) => {
+    return fetch(`http://localhost:3000/categories/${id}`, {
+        method: "DELETE"
+    })
+}
+
+const ordenerCategory = (category) => {
+    return fetch(`http://localhost:3000/products/${category}`).then( response => response.json())
 }
 
 const producto = () => {
@@ -47,7 +71,6 @@ const editProduct = (id) => {
 }
 
 const deleteProduct = (id) => {
-    console.log('eliminar a -->', id);
     return fetch(`http://localhost:3000/products/${id}`, {
         method: "DELETE"
     })
@@ -63,6 +86,12 @@ const updateProduct = (name, description, url, price, category, id) => {
         .catch((error) => error);
 };
 
+const productCategory = async () => {
+    const categories = await fetch("http://localhost:3000/products")
+    return console.log(categories);
+    //  fetch("http://localhost:3000/products").then( response => response.json())
+}
+
 
 export const clientServices = {
     formLogin,
@@ -72,4 +101,11 @@ export const clientServices = {
     editProduct,
     deleteProduct,
     updateProduct,
+    category,
+    createCategory,
+    deleteCategory,
+    editCategory,
+    updateCategory,
+    ordenerCategory,
+    productCategory,
 }

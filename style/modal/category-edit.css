@@ -1,0 +1,14 @@
+@import url(../variables.css);
+
+.category__edit {
+    transform: translateX(100vw);
+}
+
+.category__edit__show {
+    transform: translateX(0);
+}
+
+.edit__category__create {
+    background-color: var(--btn-bg-blue);
+    color: var(--btn-bg-white);
+}

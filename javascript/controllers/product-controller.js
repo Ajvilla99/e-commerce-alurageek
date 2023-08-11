@@ -8,6 +8,11 @@ let editObject = {
     id: undefined,
 }
 
+let editCat = {
+    nameCat: '',
+    id: undefined,
+}
+
 
 const modalAlert = document.querySelector('.modal__alert');
 // accion menu
@@ -23,12 +28,7 @@ socialMenu.addEventListener('click', () => {
 const btnCreate = document.querySelector('.create__product');
 const modalCr = document.querySelector('.modal__cr');
 const closeModalCr = document.querySelector('.close__modal-cr');
-let name = document.querySelector('[data-tipo="name-cr"]');
-let description = document.querySelector('[data-tipo="description-cr"]');
-let price = document.querySelector('[data-tipo="price-cr"]');
-let url = document.querySelector('.view__cr');
-let category = document.querySelector('[data-tipo="category-cr"]');
-    
+
 btnCreate.addEventListener('click', () => {
     modalCr.classList.add('modal__cr-show')
 })
@@ -45,10 +45,17 @@ closeModalCr.addEventListener('click', () => {
 const form = document.querySelector('[data-create');
 form.addEventListener('submit', (e) => {
     e.preventDefault()
-    clientServices.crearProducto(name.value, description.value, url.src, price.value, category.value).then( respuesta => { respuesta})
+    let name = document.querySelector('[data-tipo="name-cr"]').value;
+    let description = document.querySelector('[data-tipo="description-cr"]').value;
+    let price = parseFloat(document.querySelector('[data-tipo="price-cr"]').value);
+    let formattedPrice = price.toFixed(2);
+    let url = document.querySelector('.view__cr').src;
+    let category = document.querySelector('[data-tipo="category-cr"]').value;
+    clientServices.crearProducto(name, description, url, formattedPrice, category).then( respuesta => { respuesta})
     .catch(err => console.log(err));
 });
 
+// Ver img
 const fileCr = document.querySelector('.aside__file');
 const imgCr = document.querySelector('.view__cr');
 const imgUploadCr = document.querySelector('.add__button-cr');
@@ -113,9 +120,7 @@ function readProduct(name, price, url, id) {
     editBtn.addEventListener("click", () => {
         modalEdit.classList.add('modal__ed__show');
         clientServices.editProduct(id).then((product) => {
-            editObject = {
-                ...product
-            }
+            editObject = {...product}
             nameEdit.value = product.name;
             descriptionEdit.value = product.description;
             imgEdit.src = product.url;
@@ -136,6 +141,12 @@ function readProduct(name, price, url, id) {
     return linea
 }
 
+const editBtnClose = document.querySelector('.close__modal__ed');
+editBtnClose.addEventListener('click', () => {
+    const modalEdit = document.querySelector('.modal__ed');
+    modalEdit.classList.remove('modal__ed__show');
+})
+
 let closeAlert = document.querySelector('.btn__false')
 closeAlert.addEventListener('click', () =>{
     modalAlert.classList.remove('modal__alert__show');
@@ -152,6 +163,7 @@ formEdit.addEventListener('submit', (e) => {
     clientServices.updateProduct(nameEdit, descriptionEdit, imgEdit, priceEdit, categoryEdit,editObject?.id)
 })
 
+// Previsualizar imagen seleccionada
 const file = document.querySelector('[data-tipo="file"]');
 const img = document.querySelector('[data-tipo="img-view"]');
 const imgUpload = document.querySelector('.add__button');
@@ -173,18 +185,132 @@ imgUpload.addEventListener('click', () => {
 });
 
 
-const editBtnClose = document.querySelector('.close__modal__ed');
-editBtnClose.addEventListener('click', () => {
-    const modalEdit = document.querySelector('.modal__ed');
-    modalEdit.classList.remove('modal__ed__show');
+
+
+// Crear Categoria
+const newCategory = document.querySelector('[data-category]');
+newCategory.addEventListener('submit', (e) => {
+    e.preventDefault();
+    // Obtener los datos del formulario
+    const categoryName = document.querySelector('.category__create-name').value;
+    clientServices.createCategory(categoryName)
+});
+
+const closeModalAlert = document.querySelector('.btn__false');
+closeModalAlert.addEventListener("click", (e) => {
+    e.preventDefault()
+    showModal.classList.remove('modal__category__show');
 })
+
+// Leer Categorias
+const showModal = document.querySelector('.modal__alert');
+const editCategoryShow = document.querySelector('.category__edit')
+const nameCat = document.querySelector('.edit__category__name')
+    function readCategories (name, id) {
+    const linea = document.createElement('section');
+    linea.classList.add('product__list_box');
+    const content = `
+        <div class="head__category">
+            <h1 class="title__category">
+                ${name}
+            </h1>
+            <div class="btn__category_box">
+            <a class="btn__plus btn__category btn__edit">
+                Editar categoria
+                <i class='bx bxs-pencil'></i>
+            </a>
+            <a class="btn__plus btn__category btn__trash">
+                Eliminar categoria
+                <i class='bx bxs-trash'></i>
+            </a>
+            </div>
+        </div>
+        <ol class="product__list">
+        </ol>`
+    linea.innerHTML = content
+    const editCategory = linea.querySelector('.btn__edit')
+    editCategory.addEventListener('click', () => {
+        editCategoryShow.classList.add('category__edit__show')
+        clientServices.editCategory(id).then((category) => {
+            console.log(id);
+            editCat = {...category}
+            nameCat.value = category.name;
+        })
+    })
+
+    const deleteCategory = linea.querySelector('.btn__trash');
+    const titleDelete = document.querySelector('.title__delete');
+    const detalleSpan = document.querySelector('.detalle__span');
+    deleteCategory.addEventListener('click', () => {
+        titleDelete.textContent = 'Eliminar Categoria'
+        detalleSpan.textContent = '¿Desea eliminar esta categoria de forma permanente?'
+        showModal.classList.add('modal__category__show');
+        const deleteTrue = document.querySelector('.btn__true');
+        deleteTrue.addEventListener('click', () => {
+            clientServices.deleteCategory(id)
+            .then(response => {})
+                .catch(err => alert('Ocurrio un error'));
+        })
+    })   
+    return linea
+}
+
+const formEditCategory = document.getElementById('fomr__edit__category')
+formEditCategory.addEventListener('submit', (e) => {
+    e.preventDefault()
+    const categoryName = document.querySelector('.edit__category__name').value
+    clientServices.updateCategory(categoryName, editCat?.id);
+})
+
+const editCategoryClose = document.getElementById('close__category');
+
+editCategoryClose.addEventListener('click', () => {
+    editCategoryShow.classList.remove('category__edit__show')
+})
+// Editar categoria
+const modalCategory = document.getElementById('create__category');
+const categoryShow = document.querySelector('.modal__category');
+modalCategory.addEventListener('click', () => {
+    categoryShow.classList.add('modal__category__show')
+})
+const modalCategoryClose = document.querySelector('.category__close');
+modalCategoryClose.addEventListener('click', () => {
+    categoryShow.classList.remove('modal__category__show');
+})
+
+// conexion con el json server de categorias
+const allCategories = document.getElementById('all__categories');
+clientServices.category()
+    .then((data) => {
+        data.forEach(({name, id}) => {
+            const createNewCategory = readCategories(name, id)
+            allCategories.append(createNewCategory);
+        })
+    })
+    .catch((error) => console.log(error));
+
+
+
     
 const elements = document.querySelector('[data-product]');
+
 clientServices.producto()
     .then((data) => {
         data.forEach(({name, price, url, id}) => {
-            const nuevaLinea =  readProduct(name, price, url, id)
+            let num = parseFloat(price)
+            let numFixed = num.toFixed(2)
+            const nuevaLinea =  readProduct(name, numFixed, url, id)
             elements.appendChild(nuevaLinea)
         })
     })
     .catch((error) => console.log(error));
+
+
+const test = document.querySelector('.test');
+test.addEventListener('click', () => {
+    clientServices.productCategory()
+    .then((data) => {
+        console.log(data);
+    })
+    .catch((error) => console.log(error));
+})

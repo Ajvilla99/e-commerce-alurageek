@@ -17,17 +17,24 @@
 .btn__box {
     display: flex;
     align-items: center;
-
+    gap: .7rem;
 }
 .btn__plus {
+    padding: 10px;
     display: flex;
-    align-items: center;
     gap: 5px;
+    align-items: center;
     text-decoration: none;
+    font-weight: 500;
     color: var(--text-color-blue);
+    border: 2px solid var(--btn-bg-blue);
+    border-radius: 6px;
     transition: .3s ease;
 }
-.btn__plus:hover {
+
+.create__product:hover {
+    transform: scale(1.1); /* Puedes ajustar la escala según tu preferencia */
+}
+.create__category:hover {
     transform: scale(1.1);
-    font-weight: 500;
 }

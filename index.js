@@ -21,13 +21,8 @@ function productClient (name, price, url, id) {
                 </div>
             </div>
             <div class="product__shop">
-            <div class="count int__shop" href="#">
-                <i class='bx bx-chevron-left arrow' ></i>
-                <span>0</span>
-                <i class='bx bx-chevron-right arrow' ></i>
-            </div>
                 <div class="add__cart int__shop" href="#">
-                    <i class="fa-solid fa-cart-plus"></i>
+                    <span class="addTo__cart">Ver producto<i class="fa-solid fa-cart-plus"></i></span>
                 </div>
             </div>`
         linea.innerHTML = content;

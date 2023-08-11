@@ -6,10 +6,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    background-color: #11111183;
+    background-color: rgba(25,34,69,.8);
     z-index: 300;
     transition: .8s ease;
 }
@@ -150,6 +150,7 @@
     font-size: 18px;
     transition: .3s ease;
     cursor: pointer;
+    border: 2px solid var(--color-bg-2);
 }
 
 .btn:hover {
@@ -180,8 +181,6 @@
     align-items: center;
     justify-content: center;
 }
-
-
 
 .close__modal:hover {
     background-color: var(--color-bg-2);
