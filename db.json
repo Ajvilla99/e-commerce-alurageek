@@ -19,7 +19,28 @@
     {
       "name": "consolas",
       "id": "1e899142-9429-44a8-9a01-2f6abe7254c9"
+    },
+    {
+      "name": "Hogar",
+      "id": "8bba81e3-c3da-4233-8dd6-c4fd91c08a64"
     }
   ],
-  "products": []
+  "products": [
+    {
+      "name": "Camisa manga larga con cuello",
+      "description": "Descubre la Elegancia en su Máxima Expresión: Camisa Negra con Cuello. Una Prenda que Fusiona el Estilo Clásico con la Modernidad. Confeccionada con los Finestras Telas para Brindarte Comodidad y Distinción. Ya sea para una Ocasión Especial o para Resaltar en tu Día a Día, esta Camisa es la Elección Perfecta. Encuentra tu Estilo, Encuentra la Confianza, Encuentra la Camisa Negra con Cuello.",
+      "url": "/eccomerce/assets/img/clothes/Camisa cuello.png",
+      "price": "25.00",
+      "category": "6209dcc7-be7d-4b8b-9095-83ac9042cb34",
+      "id": "60c398e0-7db8-4279-ba6d-798e4e6e9832"
+    },
+    {
+      "name": "Camisa manga larga cuello redondo",
+      "description": "Un Toque de Sofisticación Relajada: Descubre Nuestra Camisa Gris de Manga Larga con Cuello Redondo. La Elegancia de la Sencillez se Une a la Comodidad sin Esfuerzo en esta Prenda Versátil. El Color Gris Neutral se Combina sin Esfuerzo con Cualquier Atuendo, Brindándote Infinitas Opciones para Estilizar Tu Día. Ya Sea para una Reunión Casual o para Disfrutar de un Momento Tranquilo, Esta Camisa se Convertirá en tu Favorita Instantáneamente. Experimenta el Confort y la Moda en Cada Detalle de Nuestra Camisa Gris de Manga Larga con Cuello Redondo.",
+    "url": "../assets/img/clothes/camisa-manga-larga-gris.png",
+      "price": "32.00",
+      "category": "6209dcc7-be7d-4b8b-9095-83ac9042cb34",
+      "id": "1408bc90-e422-474e-8454-d2af3608acf3"
+    }
+  ]
 }
