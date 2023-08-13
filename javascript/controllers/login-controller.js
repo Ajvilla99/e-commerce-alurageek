@@ -23,7 +23,7 @@ form.addEventListener('submit', (e) => {
         if (authenticatedUser) {
             alert('Inicio de sesión exitoso. ¡Bienvenido!');
             setTimeout(() => {
-                location.href = "./e-commerce-alurageek/screen/create-product.html";
+                location.href = "e-commerce-alurageek/screen/create-product.html";
             }, 1500);
         } else {
             const message = document.querySelector('.span__form')
