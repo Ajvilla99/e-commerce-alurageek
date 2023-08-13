@@ -52,7 +52,7 @@ const ordenerCategory = (category) => {
 }
 
 const producto = () => {
-    return fetch("http://localhost:3000/products").then( response => response.json())
+    return fetch("https://json-ecommerce-alura-geek.vercel.app/categories/products").then( response => response.json())
 }
 
 const crearProducto = (name, description, url, price, category) => {
