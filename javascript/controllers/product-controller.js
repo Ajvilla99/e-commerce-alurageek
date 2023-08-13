@@ -34,11 +34,11 @@ form.addEventListener('submit', (e) => {
     let description = document.querySelector('[data-tipo="description-cr"]').value;
     let price = parseFloat(document.querySelector('[data-tipo="price-cr"]').value);
     let formattedPrice = price.toFixed(2);
-    let url = document.querySelector('.view__cr').src;
+    let urlInput = document.querySelector('.view__url')
+    let url = urlInput.value || document.querySelector('.view__cr').src;
     let category = document.querySelector('[data-tipo="category-cr"]').value;
-    clientServices.crearProducto(name, description, url, formattedPrice, category).then( respuesta => { respuesta} )
+    clientServices.crearProducto(name, description, url, formattedPrice, category).then( respuesta => { respuesta})
     .catch(err => console.log(err));
-    location.reload()
 });
 
 // Crear Producto
@@ -59,16 +59,31 @@ closeModalCr.addEventListener('click', () => {
     name.value = ''
     description.value = ''
     price.value = ''
-    url.src = '../assets/img/icon/file.png'
+    url.src = ''
     category.value = ''
 })
 
-// Ver img
+// Previsualizar imagen
+
+
+const viewImage = document.querySelector('.view__cr');
+const urlInput = document.querySelector('.view__url');
+urlInput.addEventListener('input', () => {
+    const enteredUrl = urlInput.value;
+    if (enteredUrl) {
+        viewImage.src = enteredUrl;
+    } else {
+        viewImage.src = ''; 
+        imagePreviewDiv.innerHTML = '';
+    }
+});
 const fileCr = document.querySelector('.aside__file');
 const imgCr = document.querySelector('.view__cr');
 const imgUploadCr = document.querySelector('.add__button-cr');
 fileCr.addEventListener('change', (e) => {
+
     let url = e.target.files[0];
+    urlInput.value = ''
     if(url){
         const fileReader = new FileReader()
         fileReader.readAsDataURL(url)
@@ -171,7 +186,6 @@ formEdit.addEventListener('submit', (e) => {
     const imgEdit = document.getElementById('view-ed').src;
     const categoryEdit = document.querySelector('[data-tipo="category-ed"]').value
     clientServices.updateProduct(nameEdit, descriptionEdit, imgEdit, priceEdit, categoryEdit,editObject?.id)
-    location.reload()
 })
 
 // Previsualizar imagen seleccionada
@@ -306,7 +320,6 @@ formEditCategory.addEventListener('submit', (e) => {
     e.preventDefault()
     const categoryName = document.querySelector('.edit__category__name').value
     clientServices.updateCategory(categoryName, editCat?.id);
-    location.reload()
 })
 
 const editCategoryClose = document.getElementById('close__category');

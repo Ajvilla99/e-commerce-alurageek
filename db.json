@@ -19,28 +19,152 @@
     {
       "name": "consolas",
       "id": "1e899142-9429-44a8-9a01-2f6abe7254c9"
-    },
-    {
-      "name": "Hogar",
-      "id": "8bba81e3-c3da-4233-8dd6-c4fd91c08a64"
     }
   ],
   "products": [
     {
       "name": "Camisa manga larga con cuello",
-      "description": "Descubre la Elegancia en su Máxima Expresión: Camisa Negra con Cuello. Una Prenda que Fusiona el Estilo Clásico con la Modernidad. Confeccionada con los Finestras Telas para Brindarte Comodidad y Distinción. Ya sea para una Ocasión Especial o para Resaltar en tu Día a Día, esta Camisa es la Elección Perfecta. Encuentra tu Estilo, Encuentra la Confianza, Encuentra la Camisa Negra con Cuello.",
-      "url": "https://github.com/Ajvilla99/e-commerce-alurageek/blob/assets/img/clothes/camisa-azul.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu justo in tellus fermentum feugiat. Maecenas auctor, justo a tincidunt ullamcorper, libero justo tristique quam, non dictum nisi ex et erat.",
+      "url": "https://res.cloudinary.com/dyl3eqv3u/image/upload/v1691950021/img/clothes/xhkyfvxqchqjbbc5jqby.png",
       "price": "25.00",
       "category": "6209dcc7-be7d-4b8b-9095-83ac9042cb34",
       "id": "60c398e0-7db8-4279-ba6d-798e4e6e9832"
     },
     {
       "name": "Camisa manga larga cuello redondo",
-      "description": "Un Toque de Sofisticación Relajada: Descubre Nuestra Camisa Gris de Manga Larga con Cuello Redondo. La Elegancia de la Sencillez se Une a la Comodidad sin Esfuerzo en esta Prenda Versátil. El Color Gris Neutral se Combina sin Esfuerzo con Cualquier Atuendo, Brindándote Infinitas Opciones para Estilizar Tu Día. Ya Sea para una Reunión Casual o para Disfrutar de un Momento Tranquilo, Esta Camisa se Convertirá en tu Favorita Instantáneamente. Experimenta el Confort y la Moda en Cada Detalle de Nuestra Camisa Gris de Manga Larga con Cuello Redondo.",
-    "url": "../assets/img/clothes/camisa-manga-larga-gris.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu justo in tellus fermentum feugiat. Maecenas auctor, justo a tincidunt ullamcorper, libero justo tristique quam, non dictum nisi ex et erat.",
+      "url": "https://res.cloudinary.com/dyl3eqv3u/image/upload/v1691950021/img/clothes/b8fwlqavncyugas3fv5g.png",
       "price": "32.00",
       "category": "6209dcc7-be7d-4b8b-9095-83ac9042cb34",
       "id": "1408bc90-e422-474e-8454-d2af3608acf3"
+    },
+    {
+      "name": "Sudadera",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu justo in tellus fermentum feugiat. Maecenas auctor, justo a tincidunt ullamcorper, libero justo tristique quam, non dictum nisi ex et erat.",
+      "url": "https://res.cloudinary.com/dyl3eqv3u/image/upload/v1691950021/img/clothes/khpywplsmbbqxhafzrbe.png",
+      "price": "66.00",
+      "category": "6209dcc7-be7d-4b8b-9095-83ac9042cb34",
+      "id": "148b055c-0ba2-44f0-8082-f00f13264eb0"
+    },
+    {
+      "name": "Camisa manga corta (Negra)",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu justo in tellus fermentum feugiat. Maecenas auctor, justo a tincidunt ullamcorper, libero justo tristique quam, non dictum nisi ex et erat.",
+      "url": "https://res.cloudinary.com/dyl3eqv3u/image/upload/v1691950021/img/clothes/al9bkipmztchxtfnrqyd.png",
+      "price": "22.00",
+      "category": "6209dcc7-be7d-4b8b-9095-83ac9042cb34",
+      "id": "b2f509ae-ef32-4cb9-8ab7-14c9c59fbb1a"
+    },
+    {
+      "name": "Camisa manga corta (Blanca)",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu justo in tellus fermentum feugiat. Maecenas auctor, justo a tincidunt ullamcorper, libero justo tristique quam, non dictum nisi ex et erat.",
+      "url": "https://res.cloudinary.com/dyl3eqv3u/image/upload/v1691950021/img/clothes/u5pukj3sajulo4howdpd.png",
+      "price": "22.00",
+      "category": "6209dcc7-be7d-4b8b-9095-83ac9042cb34",
+      "id": "5ce0b7ba-8180-46bf-a75e-b616cfffd1fd"
+    },
+    {
+      "name": "Darth Vader LEGO",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu justo in tellus fermentum feugiat. Maecenas auctor, justo a tincidunt ullamcorper, libero justo tristique quam, non dictum nisi ex et erat.",
+      "url": "https://res.cloudinary.com/dyl3eqv3u/image/upload/v1691950020/img/starwars/nnh28yf77dnmrwmztzos.png",
+      "price": "33.00",
+      "category": "8e802712-57e1-4e2c-befe-95764e863d83",
+      "id": "42c56f5a-f948-4f35-8531-2de591ae8074"
+    },
+    {
+      "name": "Stormtrooper",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu justo in tellus fermentum feugiat. Maecenas auctor, justo a tincidunt ullamcorper, libero justo tristique quam, non dictum nisi ex et erat.",
+      "url": "https://res.cloudinary.com/dyl3eqv3u/image/upload/v1691950020/img/starwars/kqistwjo2vnmpp9v7xqt.png",
+      "price": "33.00",
+      "category": "8e802712-57e1-4e2c-befe-95764e863d83",
+      "id": "217ec146-0eb2-44e6-8285-711076b51dfc"
+    },
+    {
+      "name": "Anakin Skywalker LEGO",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu justo in tellus fermentum feugiat. Maecenas auctor, justo a tincidunt ullamcorper, libero justo tristique quam, non dictum nisi ex et erat.",
+      "url": "https://res.cloudinary.com/dyl3eqv3u/image/upload/v1691950020/img/starwars/tzf0cujbvqr61ylpujnx.png",
+      "price": "33.00",
+      "category": "8e802712-57e1-4e2c-befe-95764e863d83",
+      "id": "23ad8326-b4a7-48ee-9b8b-d2055d7915d7"
+    },
+    {
+      "name": "Chewbacca",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu justo in tellus fermentum feugiat. Maecenas auctor, justo a tincidunt ullamcorper, libero justo tristique quam, non dictum nisi ex et erat.",
+      "url": "https://res.cloudinary.com/dyl3eqv3u/image/upload/v1691950019/img/starwars/tmv5ohx8ielniac3nqq9.png",
+      "price": "33.00",
+      "category": "8e802712-57e1-4e2c-befe-95764e863d83",
+      "id": "cebfdb91-45a3-4bcb-90ce-d5e14b4d3d16"
+    },
+    {
+      "name": "Stormtrooper LEGO",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu justo in tellus fermentum feugiat. Maecenas auctor, justo a tincidunt ullamcorper, libero justo tristique quam, non dictum nisi ex et erat.",
+      "url": "https://res.cloudinary.com/dyl3eqv3u/image/upload/v1691950019/img/starwars/pxyribfagzbzpuduntra.png",
+      "price": "33.00",
+      "category": "8e802712-57e1-4e2c-befe-95764e863d83",
+      "id": "e47c2c75-f2a5-459f-9c52-0dc7139f45f0"
+    },
+    {
+      "name": "R2-D2",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu justo in tellus fermentum feugiat. Maecenas auctor, justo a tincidunt ullamcorper, libero justo tristique quam, non dictum nisi ex et erat.",
+      "url": "https://res.cloudinary.com/dyl3eqv3u/image/upload/v1691950018/img/starwars/u5ygiukhvujn5ebhjx1l.png",
+      "price": "33.00",
+      "category": "8e802712-57e1-4e2c-befe-95764e863d83",
+      "id": "0837f87a-adc0-442b-8630-a47e657924d0"
+    },
+    {
+      "name": "PlayStation5 (PS5)",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu justo in tellus fermentum feugiat. Maecenas auctor, justo a tincidunt ullamcorper, libero justo tristique quam, non dictum nisi ex et erat.",
+      "url": "https://res.cloudinary.com/dyl3eqv3u/image/upload/v1691950024/img/console/jqtrsfzz95ifambkth5k.png",
+      "price": "499.00",
+      "category": "1e899142-9429-44a8-9a01-2f6abe7254c9",
+      "id": "88e14326-341e-447d-a16c-0d93eb693a97"
+    },
+    {
+      "name": "Spider man 2 (PS5)",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu justo in tellus fermentum feugiat. Maecenas auctor, justo a tincidunt ullamcorper, libero justo tristique quam, non dictum nisi ex et erat.",
+      "url": "https://res.cloudinary.com/dyl3eqv3u/image/upload/v1691950023/img/console/slzoz1zwotfdyi9zydoe.png",
+      "price": "55.00",
+      "category": "1e899142-9429-44a8-9a01-2f6abe7254c9",
+      "id": "6e486bfd-ace1-4c08-bc0a-c408e94bc62c"
+    },
+    {
+      "name": "Controller dualsense Xbox series X|S",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu justo in tellus fermentum feugiat. Maecenas auctor, justo a tincidunt ullamcorper, libero justo tristique quam, non dictum nisi ex et erat.",
+      "url": "https://res.cloudinary.com/dyl3eqv3u/image/upload/v1691950023/img/console/fz2aemmvvhnivatb5iwg.png",
+      "price": "33.00",
+      "category": "1e899142-9429-44a8-9a01-2f6abe7254c9",
+      "id": "df59851d-f6f8-48a5-85d3-d1acf709d1bb"
+    },
+    {
+      "name": "PlayStation2 (PS2)",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu justo in tellus fermentum feugiat. Maecenas auctor, justo a tincidunt ullamcorper, libero justo tristique quam, non dictum nisi ex et erat.",
+      "url": "https://res.cloudinary.com/dyl3eqv3u/image/upload/v1691950023/img/console/wyfnq7eoed4iju5mwtw5.png",
+      "price": "120.00",
+      "category": "1e899142-9429-44a8-9a01-2f6abe7254c9",
+      "id": "cca98899-89a6-4c76-b902-71620efbb07e"
+    },
+    {
+      "name": "Xbox series X",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu justo in tellus fermentum feugiat. Maecenas auctor, justo a tincidunt ullamcorper, libero justo tristique quam, non dictum nisi ex et erat.",
+      "url": "https://res.cloudinary.com/dyl3eqv3u/image/upload/v1691950023/img/console/qky1k5wnldqmkt48v6sr.png",
+      "price": "499.00",
+      "category": "1e899142-9429-44a8-9a01-2f6abe7254c9",
+      "id": "f146d379-1a5c-4eb2-9568-2c9e65ce4d28"
+    },
+    {
+      "name": "Nintento Switch",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu justo in tellus fermentum feugiat. Maecenas auctor, justo a tincidunt ullamcorper, libero justo tristique quam, non dictum nisi ex et erat.",
+      "url": "https://res.cloudinary.com/dyl3eqv3u/image/upload/v1691965549/img/console/myxxguo15b9qdqdydq6o.png",
+      "price": "300.00",
+      "category": "1e899142-9429-44a8-9a01-2f6abe7254c9",
+      "id": "60a85c5b-b9ee-4488-9eb0-361eae7f3a99"
+    },
+    {
+      "name": "Camisa polo",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu justo in tellus fermentum feugiat. Maecenas auctor, justo a tincidunt ullamcorper, libero justo tristique quam, non dictum nisi ex et erat.",
+      "url": "https://res.cloudinary.com/dyl3eqv3u/image/upload/v1691963545/img/clothes/q2yxlwfrehtbjl7ozmed.png",
+      "price": "33.00",
+      "category": "6209dcc7-be7d-4b8b-9095-83ac9042cb34",
+      "id": "7d52fc64-f81a-406e-a167-170612ddcd94"
     }
   ]
 }

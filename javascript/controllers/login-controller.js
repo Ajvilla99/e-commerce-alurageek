@@ -45,8 +45,9 @@ function initRegistration() {
         clientServices.createUser(name, email, password).then( respuesta => {
         })
         .catch(err => console.log(err));
-});
+    });
 }
+initRegistration()
 
 // document.addEventListener("DOMContentLoaded", function () {
 //     datos.addEventListener('submit', validarFormulario);
@@ -79,5 +80,3 @@ function initRegistration() {
 //     this.submit();
 // }
 
-
-initRegistration()

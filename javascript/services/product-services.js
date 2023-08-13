@@ -1,9 +1,9 @@
 const formLogin = () => {
-    return fetch("https://json-test-kohl.vercel.app/users").then( response => response.json())
+    return fetch("http://localhost:3000/users").then( response => response.json())
 }
 
 const createUser = (name, email, password) => {
-    return fetch("https://json-test-kohl.vercel.app/users", {
+    return fetch("http://localhost:3000/users", {
         method: "POST",
         headers: {
             "content-type": "Application/JSON"
@@ -13,11 +13,11 @@ const createUser = (name, email, password) => {
 }
 
 const category = () => {
-    return fetch("https://json-test-kohl.vercel.app/categories").then( response => response.json())
+    return fetch("http://localhost:3000/categories").then( response => response.json())
 }
 
 const createCategory = (name) => {
-    return fetch("https://json-test-kohl.vercel.app/categories", {
+    return fetch("http://localhost:3000/categories", {
         method: "POST",
         headers: {
             "content-type": "Application/JSON"
@@ -28,11 +28,11 @@ const createCategory = (name) => {
 }
 
 const editCategory = (id) => {
-    return fetch(`https://json-test-kohl.vercel.app/categories/${id}`).then( response => response.json())
+    return fetch(`http://localhost:3000/categories/${id}`).then( response => response.json())
 }
 
 const updateCategory = (name, id) => {
-    return fetch(`https://json-test-kohl.vercel.app/categories/${id}`, {
+    return fetch(`http://localhost:3000/categories/${id}`, {
         method: 'PUT',
         headers: {"Content-Type": "Application/JSON"},
         body: JSON.stringify({name, id}),
@@ -42,21 +42,21 @@ const updateCategory = (name, id) => {
 }
 
 const deleteCategory = (id) => {
-    return fetch(`https://json-test-kohl.vercel.app/categories/${id}`, {
+    return fetch(`http://localhost:3000/categories/${id}`, {
         method: "DELETE"
     })
 }
 
 const ordenerCategory = (category) => {
-    return fetch(`https://json-test-kohl.vercel.app/products/${category}`).then( response => response.json())
+    return fetch(`http://localhost:3000/products/${category}`).then( response => response.json())
 }
 
 const producto = () => {
-    return fetch("https://json-test-kohl.vercel.app/products").then( response => response.json())
+    return fetch("http://localhost:3000/products").then( response => response.json())
 }
 
 const crearProducto = (name, description, url, price, category) => {
-    return fetch("https://json-test-kohl.vercel.app/products", {
+    return fetch("http://localhost:3000/products", {
         method: "POST",
         headers: {
             "content-type": "Application/JSON"
@@ -67,17 +67,17 @@ const crearProducto = (name, description, url, price, category) => {
 }
 
 const editProduct = (id) => {
-    return fetch(`https://json-test-kohl.vercel.app/products/${id}`).then( response => response.json())
+    return fetch(`http://localhost:3000/products/${id}`).then( response => response.json())
 }
 
 const deleteProduct = (id) => {
-    return fetch(`https://json-test-kohl.vercel.app/products/${id}`, {
+    return fetch(`http://localhost:3000/products/${id}`, {
         method: "DELETE"
     })
 }
 
 const updateProduct = (name, description, url, price, category, id) => {
-    return fetch(`https://json-test-kohl.vercel.app/products/${id}`, {
+    return fetch(`http://localhost:3000/products/${id}`, {
         method: 'PUT',
         headers:{'Content-Type': 'Application/JSON'},
         body : JSON.stringify ({name, description, url, price, category, id}),
@@ -87,7 +87,7 @@ const updateProduct = (name, description, url, price, category, id) => {
 };
 
 const productCategory = () => {
-    return fetch("https://json-test-kohl.vercel.app/products").then( response => response.json())
+    return fetch("http://localhost:3000/products").then( response => response.json())
 }
 
 export const clientServices = {
