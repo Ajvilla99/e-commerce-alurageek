@@ -48,15 +48,15 @@ const deleteCategory = (id) => {
 }
 
 const ordenerCategory = (category) => {
-    return fetch(`https://json-ecommerce-alura-geek.vercel.app/categories/${category}`).then( response => response.json())
+    return fetch(`https://json-ecommerce-alura-geek.vercel.app/${category}`).then( response => response.json())
 }
 
 const producto = () => {
-    return fetch("https://json-ecommerce-alura-geek.vercel.app/categories/products").then( response => response.json())
+    return fetch("https://json-ecommerce-alura-geek.vercel.app/products").then( response => response.json())
 }
 
 const crearProducto = (name, description, url, price, category) => {
-    return fetch("https://json-ecommerce-alura-geek.vercel.app/categories/products", {
+    return fetch("https://json-ecommerce-alura-geek.vercel.app/products", {
         method: "POST",
         headers: {
             "content-type": "Application/JSON"
@@ -67,17 +67,17 @@ const crearProducto = (name, description, url, price, category) => {
 }
 
 const editProduct = (id) => {
-    return fetch(`https://json-ecommerce-alura-geek.vercel.app/categories/${id}`).then( response => response.json())
+    return fetch(`https://json-ecommerce-alura-geek.vercel.app/products/${id}`).then( response => response.json())
 }
 
 const deleteProduct = (id) => {
-    return fetch(`https://json-ecommerce-alura-geek.vercel.app/categories/${id}`, {
+    return fetch(`https://json-ecommerce-alura-geek.vercel.app/products/${id}`, {
         method: "DELETE"
     })
 }
 
 const updateProduct = (name, description, url, price, category, id) => {
-    return fetch(`https://json-ecommerce-alura-geek.vercel.app/categories/${id}`, {
+    return fetch(`https://json-ecommerce-alura-geek.vercel.app/products/${id}`, {
         method: 'PUT',
         headers:{'Content-Type': 'Application/JSON'},
         body : JSON.stringify ({name, description, url, price, category, id}),
@@ -87,7 +87,7 @@ const updateProduct = (name, description, url, price, category, id) => {
 };
 
 const productCategory = () => {
-    return fetch("https://json-ecommerce-alura-geek.vercel.app/categories/products").then( response => response.json())
+    return fetch("https://json-ecommerce-alura-geek.vercel.app/products").then( response => response.json())
 }
 
 export const clientServices = {
