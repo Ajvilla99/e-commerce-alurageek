@@ -9,12 +9,19 @@
     --text-bg-hover: #3c69a3db;
     --text-color-alt: #fff;
 
+    --text-blue: #18314F;
+    --text-white: #F8F1F4;
+
+
     --color-azul-claro: #00d0ff;
     --color-invalid: #b44949;
     --btn-bg-blue: #18314F;
     --btn-bg-white: #F8F1F4;
     --btn-text-blue: #18314F;
     --btn-text: #ffffff;
+    --btn-white: #F8F1F4;
+    --btn-blue: #18314F;
+
 }
 html {
     scroll-behavior: smooth;

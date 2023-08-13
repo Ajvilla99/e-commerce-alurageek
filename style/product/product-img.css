@@ -9,6 +9,6 @@
 }
 .product__img img {
     background-size: cover;
-    height: 90%;
+    max-height: 90%;
     max-width: 240px;
 }

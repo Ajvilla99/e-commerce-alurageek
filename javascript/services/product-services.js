@@ -86,12 +86,9 @@ const updateProduct = (name, description, url, price, category, id) => {
         .catch((error) => error);
 };
 
-const productCategory = async () => {
-    const categories = await fetch("http://localhost:3000/products")
-    return console.log(categories);
-    //  fetch("http://localhost:3000/products").then( response => response.json())
+const productCategory = () => {
+    return fetch("http://localhost:3000/products").then( response => response.json())
 }
-
 
 export const clientServices = {
     formLogin,

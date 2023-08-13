@@ -22,19 +22,51 @@ function productClient (name, price, url, id) {
             </div>
             <div class="product__shop">
                 <div class="add__cart int__shop" href="#">
-                    <span class="addTo__cart">Ver producto<i class="fa-solid fa-cart-plus"></i></span>
+                    <span class="addTo__cart">Ver producto</span>
                 </div>
             </div>`
         linea.innerHTML = content;
         return linea
 }
 
-const starwars = document.querySelector('.category__starWars')
-
-clientServices.producto()
+function readCategories (name, id) {
+const linea = document.createElement('section');
+linea.classList.add('product__list_box');
+const content = `
+    <div class="head__category">
+        <h1 class="title__category">
+            ${name}
+        </h1>
+        <div class="btn__category_box">
+        <a class="btn__plus">
+        Ver más
+        <i class="bx bx-plus"></i>
+        </a>
+        </div>
+    </div>
+    <ol class="product__list" id="product__list">
+    </ol>`
+    linea.innerHTML = content
+    const producList = linea.querySelector('.product__list')
+    clientServices.producto()
     .then((data) => {
-        data.forEach(({name, price, url, id}) => {
-            const newElement = productClient(name, price, url, id)
-            starwars.appendChild(newElement)
-        });
+        const filteredProducts = data.filter(product => product.category === id);
+        filteredProducts.forEach(({ name, price, url, id }) => {
+            let num = parseFloat(price);
+            let numFixed = num.toFixed(2);
+            const nuevaLinea = productClient(name, numFixed, url, id);
+            producList.appendChild(nuevaLinea);
+        })
+            }).catch((error) => error);
+    return linea
+}
+
+const allCategories = document.getElementById('all__categories');
+clientServices.category()
+    .then((data) => {
+        data.forEach(({name, id}) => {
+            const createNewCategory = readCategories(name, id)
+            allCategories.append(createNewCategory);
+        })
     })
+    .catch((error) => console.log(error));

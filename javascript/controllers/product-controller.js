@@ -24,22 +24,7 @@ socialMenu.addEventListener('click', () => {
     arrow.classList.toggle('bx-chevron-up')
 })
 
-// Crear Producto
-const btnCreate = document.querySelector('.create__product');
-const modalCr = document.querySelector('.modal__cr');
-const closeModalCr = document.querySelector('.close__modal-cr');
 
-btnCreate.addEventListener('click', () => {
-    modalCr.classList.add('modal__cr-show')
-})
-closeModalCr.addEventListener('click', () => {
-    modalCr.classList.remove('modal__cr-show');
-    name.value = ''
-    description.value = ''
-    price.value = ''
-    url.src = '../assets/img/icon/file.png'
-    category.value = ''
-})
 
 // Crear producto
 const form = document.querySelector('[data-create');
@@ -54,6 +39,28 @@ form.addEventListener('submit', (e) => {
     clientServices.crearProducto(name, description, url, formattedPrice, category).then( respuesta => { respuesta})
     .catch(err => console.log(err));
 });
+
+// Crear Producto
+const btnCreate = document.querySelector('.create__product');
+const modalCr = document.querySelector('.modal__cr');
+const closeModalCr = document.querySelector('.close__modal-cr');
+
+btnCreate.addEventListener('click', () => {
+    modalCr.classList.add('modal__cr-show')
+})
+closeModalCr.addEventListener('click', () => {
+    let name = document.querySelector('[data-tipo="name-cr"]');
+    let description = document.querySelector('[data-tipo="description-cr"]');
+    let price = document.querySelector('[data-tipo="price-cr"]');
+    let url = document.querySelector('.view__cr');
+    let category = document.querySelector('[data-tipo="category-cr"]');
+    modalCr.classList.remove('modal__cr-show');
+    name.value = ''
+    description.value = ''
+    price.value = ''
+    url.src = '../assets/img/icon/file.png'
+    category.value = ''
+})
 
 // Ver img
 const fileCr = document.querySelector('.aside__file');
@@ -87,6 +94,7 @@ function readProduct(name, price, url, id) {
     const linea = document.createElement("li");
     linea.classList.add('product__item');
     const content = `
+        <a class="btn__view">
         <div class="product__img">
             <img class="product__img__card" id="img__product"
             src="${url}" 
@@ -104,7 +112,7 @@ function readProduct(name, price, url, id) {
         </div>
         <div class="menu__product_main">
             <span class="action action__edit" >
-                <a class="product__edit" id="action__edit" data-edit>
+                <a class="product__edit" id="edit__product" data-edit>
                     <i class='bx bxs-pencil'></i>
                 </a>
             </span class="action action__trash">
@@ -113,10 +121,11 @@ function readProduct(name, price, url, id) {
                     <i class='bx bxs-trash'></i>
                 </a>
             </span>
-        </div>`
+        </div>
+        </a>`
     linea.innerHTML = content;
-    const editBtn = linea.querySelector('[data-edit]');
-    const modalEdit = document.querySelector('.modal');
+    const editBtn = linea.querySelector('#edit__product');
+    const modalEdit = document.querySelector('.modal__ed');
     editBtn.addEventListener("click", () => {
         modalEdit.classList.add('modal__ed__show');
         clientServices.editProduct(id).then((product) => {
@@ -184,9 +193,6 @@ imgUpload.addEventListener('click', () => {
     file.click()
 });
 
-
-
-
 // Crear Categoria
 const newCategory = document.querySelector('[data-category]');
 newCategory.addEventListener('submit', (e) => {
@@ -201,6 +207,33 @@ closeModalAlert.addEventListener("click", (e) => {
     e.preventDefault()
     showModal.classList.remove('modal__category__show');
 })
+
+// category select
+function selectCreate (name, id) {
+    return `<option value="${id}">${name}</option>`
+}
+const asideCategoryEdit = document.getElementById('select__category-edit');
+clientServices.category()
+    .then((data) => {
+        let options = '';
+        data.forEach(({name, id}) => {
+            options += selectCreate(name, id);
+        })
+
+        asideCategoryEdit.innerHTML = options
+    })
+    .catch((error) => console.log(error));
+const asideCategoryCreate = document.getElementById('select__category-create');
+clientServices.category()
+    .then((data) => {
+        let options = '';
+        data.forEach(({name, id}) => {
+            options += selectCreate(name, id);
+        })
+
+        asideCategoryCreate.innerHTML = options
+    })
+    .catch((error) => console.log(error));
 
 // Leer Categorias
 const showModal = document.querySelector('.modal__alert');
@@ -225,14 +258,24 @@ const nameCat = document.querySelector('.edit__category__name')
             </a>
             </div>
         </div>
-        <ol class="product__list">
+        <ol class="product__list" id="product__list">
         </ol>`
     linea.innerHTML = content
+    const producList = linea.querySelector('.product__list')
+    clientServices.producto()
+    .then((data) => {
+        const filteredProducts = data.filter(product => product.category === id);
+        filteredProducts.forEach(({ name, price, url, id }) => {
+            let num = parseFloat(price);
+            let numFixed = num.toFixed(2);
+            const nuevaLinea = readProduct(name, numFixed, url, id);
+            producList.appendChild(nuevaLinea);
+        });
+    }).catch((error) => error);
     const editCategory = linea.querySelector('.btn__edit')
     editCategory.addEventListener('click', () => {
         editCategoryShow.classList.add('category__edit__show')
         clientServices.editCategory(id).then((category) => {
-            console.log(id);
             editCat = {...category}
             nameCat.value = category.name;
         })
@@ -288,12 +331,8 @@ clientServices.category()
         })
     })
     .catch((error) => console.log(error));
-
-
-
-    
+// conexion con el json server productos
 const elements = document.querySelector('[data-product]');
-
 clientServices.producto()
     .then((data) => {
         data.forEach(({name, price, url, id}) => {
@@ -304,13 +343,3 @@ clientServices.producto()
         })
     })
     .catch((error) => console.log(error));
-
-
-const test = document.querySelector('.test');
-test.addEventListener('click', () => {
-    clientServices.productCategory()
-    .then((data) => {
-        console.log(data);
-    })
-    .catch((error) => console.log(error));
-})

@@ -1,0 +1,124 @@
+@import url(../variables.css);
+
+/* menu */
+.social__menu {
+    display: flex;
+    align-items: center;
+}
+.social__menu i {
+    font-size: 30px;
+    color: var(--btn-blue);
+}
+
+.detail__product {
+    width: 100%;
+    height: 79.6vh;
+    min-height: 79.6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail__box {
+    width: 80%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail__content {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.img__box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail__content_right {
+    gap: 3rem;
+    padding: 2.5%;
+    box-shadow: 0px 5px 10px 0px rgba(28, 29, 4, 0.5);
+    border-radius: 1rem;
+    justify-content: space-around;
+    background-color: var(--color-bg-2);
+}
+
+.detail__title_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detail__title_box i {
+    font-size: 40px;
+    cursor: pointer;
+    color: var(--text-white);
+}
+
+.detail__title {
+    font-size: 40px;
+    font-weight: 500;
+    font-family: var(--font);
+    color: var(--text-white);
+}
+
+.detail__description__box {
+    max-height: 40%;
+    overflow-y: hidden;
+}
+
+.detail__description {
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: justify;
+    color: var(--text-white);
+}
+
+.detail__price_box {
+    display: flex;
+    font-size: 26px;
+    color: var(--btn-white);
+}
+
+.detail__price_box span {
+    text-indent: 5px;
+}
+
+/* btn */
+.btn {
+    border: 2px solid var(--btn-white);
+    border-radius: 6px;
+    padding: 14px 10px;
+    font: var(--font);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .5s ease;
+
+}
+
+.btn__false {
+    background-color: var(--btn-blue);
+    color: var(--btn-white);
+}
+
+.btn__true {
+    border-color: var(--btn-white);
+    background-color: var(--btn-white);
+    color: var(--btn-blue);
+}
+
+.btn:hover {
+    transform: translateY(-5%);
+    -webkit-box-shadow: 5px 5px 5px -3px rgba(233, 233, 233, 0.75);
+    -moz-box-shadow: 5px 5px 5px -3px rgba(233, 233, 233, 0.75);
+    box-shadow: -5px 5px 5px -1px rgba(233, 233, 233, 0.75)
+}
