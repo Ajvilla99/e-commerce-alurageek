@@ -23,7 +23,7 @@ form.addEventListener('submit', (e) => {
         if (authenticatedUser) {
             alert('Inicio de sesión exitoso. ¡Bienvenido!');
             setTimeout(() => {
-                location.href = "screen/create-product.html";
+                location.href = "/create-product.html";
             }, 1500);
         } else {
             const message = document.querySelector('.span__form')
