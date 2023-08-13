@@ -36,8 +36,9 @@ form.addEventListener('submit', (e) => {
     let formattedPrice = price.toFixed(2);
     let url = document.querySelector('.view__cr').src;
     let category = document.querySelector('[data-tipo="category-cr"]').value;
-    clientServices.crearProducto(name, description, url, formattedPrice, category).then( respuesta => { respuesta})
+    clientServices.crearProducto(name, description, url, formattedPrice, category).then( respuesta => { respuesta} )
     .catch(err => console.log(err));
+    location.reload()
 });
 
 // Crear Producto
@@ -161,7 +162,7 @@ closeAlert.addEventListener('click', () =>{
     modalAlert.classList.remove('modal__alert__show');
 })
 
-// Editar Producto
+// Editar Producto - Actualizar producto
 formEdit.addEventListener('submit', (e) => {
     e.preventDefault()
     const nameEdit = document.querySelector('[data-tipo="nombre-edit"]').value;
@@ -170,6 +171,7 @@ formEdit.addEventListener('submit', (e) => {
     const imgEdit = document.getElementById('view-ed').src;
     const categoryEdit = document.querySelector('[data-tipo="category-ed"]').value
     clientServices.updateProduct(nameEdit, descriptionEdit, imgEdit, priceEdit, categoryEdit,editObject?.id)
+    location.reload()
 })
 
 // Previsualizar imagen seleccionada
@@ -298,11 +300,13 @@ const nameCat = document.querySelector('.edit__category__name')
     return linea
 }
 
+// form de actualizar categoria
 const formEditCategory = document.getElementById('fomr__edit__category')
 formEditCategory.addEventListener('submit', (e) => {
     e.preventDefault()
     const categoryName = document.querySelector('.edit__category__name').value
     clientServices.updateCategory(categoryName, editCat?.id);
+    location.reload()
 })
 
 const editCategoryClose = document.getElementById('close__category');

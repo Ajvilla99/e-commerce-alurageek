@@ -23,7 +23,7 @@ form.addEventListener('submit', (e) => {
         if (authenticatedUser) {
             alert('Inicio de sesión exitoso. ¡Bienvenido!');
             setTimeout(() => {
-                window.location.href = "http://127.0.0.1:5500/eccomerce/screen/create-product.html";
+                location.href = "screen/create-product.html";
             }, 1500);
         } else {
             const message = document.querySelector('.span__form')
