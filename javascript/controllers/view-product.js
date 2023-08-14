@@ -7,7 +7,7 @@ const price = document.querySelectorAll('.price_product')
 const obtenerInformacion = () => {
     const url = new URL(location);
     const id = url.searchParams.get('id');
-    clientServices.detalleProducto(id)
+    clientServices.editProduct(id)
         .then((product) => {
             name.textContent = product.name
             urlImage.src = product.url

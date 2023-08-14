@@ -105,5 +105,4 @@ export const clientServices = {
     updateCategory,
     ordenerCategory,
     productCategory,
-    detalleProducto,
 }
