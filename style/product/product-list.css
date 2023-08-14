@@ -3,7 +3,6 @@
     flex-wrap: wrap;
     gap: 1rem;
     width: 100%;
-    overflow-x: hidden;
 }
 .product__list .heart {
     position: absolute;
@@ -19,9 +18,10 @@
     border-radius: 8px;
     cursor: pointer;
     background-color: #123a55;
-    transition: .1s ease;
+    transition: .5s ease;
 }
 .product__item:hover {
+    transform: translateY(-1%);
     -webkit-box-shadow: 0px 5px 13px 1px rgba(0,0,0,0.8);
     -moz-box-shadow: 0px 5px 13px 1px rgba(0,0,0,0.8);
     box-shadow: 0px 5px 13px 1px rgba(0,0,0,0.8);

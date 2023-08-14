@@ -22,7 +22,9 @@ function productClient (name, price, url, id) {
             </div>
             <div class="product__shop">
                 <div class="add__cart int__shop" href="#">
-                    <span class="addTo__cart">Ver producto</span>
+                    <a class="addTo__cart" href="./screen/view-product.html?id=${id}">
+                        <span>Ver producto</span>
+                    </a>
                 </div>
             </div>`
         linea.innerHTML = content;

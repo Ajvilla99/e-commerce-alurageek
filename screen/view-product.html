@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="icon" href="../assets/img/logos/logo-e-commerce.png">
+    <title>view product</title>
+    <link rel="icon" href="https://res.cloudinary.com/dyl3eqv3u/image/upload/v1691950022/img/logos/v7e2narzz6t6muujhddb.png">
     <link rel="stylesheet" href="../style/reset/reset.css">
     <link rel="stylesheet" href="../style/header/header.css">
     <link rel="stylesheet" href="../style/product-create/header.css">
@@ -79,30 +79,51 @@
     <main>
     <div class="detail__product">
         <div class="detail__box">
-            <div class="detail__content">
-            <!-- imagen -->
-                <div class="img__box">
-                    <img class="img__view" src="../assets/img/star wars/producto.png" alt="Imagen del producto">
+            <div class="aside aside_left">
+                <div class="image_box">
+                    <img src="" alt="Imagen del producto" class="image_product" data-image>
                 </div>
-            </div>
-            <div class="detail__content detail__content_right">
-                <div class="detail__title_box">
-                    <span class="detail__title">Title</span>
-                    <i class="bx bx-heart btn__heart"></i>
-                </div>
-                <div class="detail__description__box">
-                    <span class="detail__description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa voluptates quos vero. Obcaecati maxime accusamus natus, neque est sed nobis nulla aliquam nostrum adipisci minus, modi incidunt consequatur aperiam in!
+                <div class="description_box">
+                    <h1 class="title_product" data-name>
+                        Title product
+                    </h1>
+                    <span class="price_product">
+                        <p>$</p>
+                        20.954
                     </span>
-                </div>
-                <div class="detail__price_box">
-                    <p>$</p><span class="detail__price">1200</span>
-                </div>
-                <div class="button">
-                    <button class="btn btn__false btn__addProduct">Agregar al carro</button>
-                    <button class="btn btn__true btn__buyNow">Comprar ahora</button>
+                    <div class="description_product">
+                        <h3>Sobre este producto</h3>
+                        <p class="text_description" data-description>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora, perferendis error. Debitis molestias sunt laudantium, iste ducimus nisi eum impedit atque blanditiis, qui et quis sit eligendi voluptatum praesentium. Odio ipsa dolores laudantium asperiores mollitia tenetur, cumque quibusdam maxime incidunt vero minima ab ipsum obcaecati iste quis, at nam architecto.</p>
+                    </div>
                 </div>
             </div>
+            <div class="aside aside_right">
+                <div class="price_product">
+                    <p>$</p>
+                    20.954
+                </div>
+                <div class="button_box">
+                    <div class="cant_contain">
+                        <input type="hidden" value="1">
+                        <span class="cant">cantidad: <span class="space_cant cant_value">1</span><i class="bx bx-chevron-down chev_active"></i></span>
+                        <ol class="can_num_box">
+                            <li class="cant_num"><a>1</a></li>
+                            <li class="cant_num"><a>2</a></li>
+                            <li class="cant_num"><a>3</a></li>
+                            <li class="cant_num"><a>4</a></li>
+                            <li class="cant_num"><a>5</a></li>
+                            <li class="cant_num"><a>6</a></li>
+                            <li class="cant_num"><a>7</a></li>
+                            <li class="cant_num"><a>8</a></li>
+                            <li class="cant_num"><a>9</a></li>
+                            <li class="cant_num"><a>10</a></li>
+                        </ol>
+                    </div>
+                    <input class="btn" type="button" value="Añadir al carro">
+                    <input class="btn btn_true" type="button" value="Comprar ahora">
+                </div>
+            </div>
+
         </div>
     </div>
     </main>
