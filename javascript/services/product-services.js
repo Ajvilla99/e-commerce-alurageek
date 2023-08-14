@@ -48,7 +48,7 @@ const deleteCategory = (id) => {
 }
 
 const ordenerCategory = (category) => {
-    return fetch(`https://json-ecommerce-alura-geek.vercel.app/products/${category}`).then( response => response.json())
+    return fetch(`http://localhost:3000/products/${category}`).then( response => response.json())
 }
 
 const producto = () => {
@@ -87,11 +87,7 @@ const updateProduct = (name, description, url, price, category, id) => {
 };
 
 const productCategory = () => {
-    return fetch("https://json-ecommerce-alura-geek.vercel.app/products").then( response => response.json())
-}
-
-const detalleProducto = (id) => {
-    return fetch(`https://json-ecommerce-alura-geek.vercel.app/products/${id}`).then(response => response.json())
+    return fetch("http://localhost:3000/products").then( response => response.json())
 }
 
 export const clientServices = {
