@@ -1,4 +1,4 @@
-import { clientServices } from "./javascript/services/product-services.js";
+import { clientServices } from "../services/product-services.js";
 
 
 function productClient (name, price, url, id) {

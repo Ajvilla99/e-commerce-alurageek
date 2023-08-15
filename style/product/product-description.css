@@ -3,8 +3,9 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
+    overflow: hidden;
 }
-.product__description .name__description {
+.name__description {
     font-size: 16px;
     color: var(--text-color-alt);
 }
@@ -61,4 +62,19 @@
 .addTo__cart:hover {
     font-size: 18px;
     border: 2px solid var(--color-azul-claro);
+}
+
+@media screen and (max-width: 500px) {
+    .product__shop  {
+        display: none;
+    }
+    .name__description {
+        width: 100%;
+        font-size: 12px;
+        height: 50%;
+        overflow: hidden;
+    }
+    .product__description .product__price .price {
+        font-size: 16px;
+    }
 }

@@ -26,3 +26,17 @@
     -moz-box-shadow: 0px 5px 13px 1px rgba(0,0,0,0.8);
     box-shadow: 0px 5px 13px 1px rgba(0,0,0,0.8);
 }
+@media screen and (max-width: 500px) {
+    
+    .product__list {
+        width: 90%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .product__item {
+        width: 140px;
+        height: 200px;
+    }
+}

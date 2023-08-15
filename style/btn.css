@@ -38,3 +38,29 @@
 .create__category:hover {
     transform: scale(1.1);
 }
+
+
+@media screen and (max-width: 500px) {
+    .btn {
+        background-color: var(--btn-bg-white);
+        color: var(--btn-text-blue);
+        padding: .8rem;
+        border-radius: 8px;
+        font-weight: 500;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 18px;
+        transition: .3s ease;
+        border: 2px solid var(--btn-bg-white);
+    }
+    .btn:hover {
+        background-color: var(--btn-bg-blue);
+        color: var(--btn-text);
+    }
+    .btn__plus {
+        color: var(--text-blue);
+        font-size: 14px;
+        font-weight: 500;
+        padding: 8px;
+    }
+}

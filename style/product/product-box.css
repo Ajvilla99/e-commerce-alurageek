@@ -60,3 +60,19 @@
     display: flex;
     gap: 1rem;
 }
+
+@media screen and (max-width: 500px) {
+    .product__list_box {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .all__categories {
+        width: 100%;
+    }
+
+    .head__category {
+        width: 80%;
+    }
+}

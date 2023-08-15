@@ -9,11 +9,17 @@
     display: flex;
     align-items: center;
     width: 80%;
-    min-width: 1200px;
+    /* min-width: 1200px; */
     height: 40vh;
     border-radius: 1rem;
     background-image: url(../assets/img/banners/banner-image.png);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+@media screen and (max-width: 500px) {
+    .banner {
+        display: none;
+    }
 }
 

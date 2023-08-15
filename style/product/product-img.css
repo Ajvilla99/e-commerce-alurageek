@@ -12,3 +12,13 @@
     max-height: 90%;
     max-width: 240px;
 }
+
+@media screen and (max-width: 500px) {
+    .product__img {
+        height: 60%;
+    }
+    .product__img img {
+        max-height: 80%;
+        max-width: 80%;
+    }
+}

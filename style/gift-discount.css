@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
 }
-.giftcode .container__giftcode {
+.container__giftcode {
     width: 80%;
     height: 100px;
     background-color: var(--color-bg-2);
@@ -15,12 +15,28 @@
     justify-content: center;
     align-items: center;
 }
-.giftcode .container__giftcode p {
+.container__giftcode p {
     font-size: 32px;
     color: var(--text-color-alt);
 }
-.giftcode .container__giftcode p span {
+.container__giftcode p span {
     font-weight: 600;
     text-transform: uppercase;
     color: var( --color-azul-claro);
+}
+
+@media screen and (max-width: 500px) {
+    .giftcode {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .container__giftcode {
+        width: 90%;
+        text-align: center;
+        line-height: 1.4;
+    }
+    .container__giftcode p {
+        font-size: 16px;
+    }
 }

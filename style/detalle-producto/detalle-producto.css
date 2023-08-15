@@ -89,6 +89,7 @@ footer {
     display: flex;
     gap: 5px;
     font-size: 28px;
+    color: var(--text-blue);
 }
 
 .description_product h3 {
@@ -98,6 +99,7 @@ footer {
 }
 
 .text_description {
+    color: var(--text-blue);
     text-align: justify;
 }
 
@@ -131,8 +133,13 @@ footer {
     font-weight: 400;
     padding: 3px 24px 3px 5px;
     border-radius: 8px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 1px 12px -1px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    background-color: var(--btn-blue);
     cursor: pointer;
+    color: var(--text-white);
+}
+
+.cant_value {
+    color: var(--text-white);
 }
 
 .chev_active {
@@ -143,6 +150,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--text-white);
 }
 
 .can_num_box {
