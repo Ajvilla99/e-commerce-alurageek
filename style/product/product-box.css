@@ -4,12 +4,14 @@
     gap: 3rem;
     margin-bottom: 3rem;
 }
+
 .product__title {
     width: 80%;
     display: flex;
     justify-content: flex-end;
     margin-bottom: 3rem;
 }
+
 .product__title h1 {
     font-size: 40px;
     font-family: var(--font);

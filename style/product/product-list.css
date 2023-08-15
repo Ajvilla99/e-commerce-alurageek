@@ -1,7 +1,8 @@
 .product__list {
     display: flex;
     flex-wrap: wrap;
-    gap: 13px;
+    justify-content: flex-start;
+    gap: 1.25rem;
     width: 100%;
 }
 .product__list .heart {
@@ -13,7 +14,7 @@
 }
 .product__item {
     position: relative;
-    width: 240px;
+    width: 265px;
     height: 400px;
     border-radius: 8px;
     cursor: pointer;
@@ -26,10 +27,12 @@
     -moz-box-shadow: 0px 5px 13px 1px rgba(0,0,0,0.8);
     box-shadow: 0px 5px 13px 1px rgba(0,0,0,0.8);
 }
+
+
 @media screen and (max-width: 500px) {
     
     .product__list {
-        width: 90%;
+        width: 80%;
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;

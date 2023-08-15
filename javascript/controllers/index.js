@@ -50,6 +50,7 @@ const content = `
     </ol>`
     linea.innerHTML = content
     const producList = linea.querySelector('.product__list')
+    console.log(producList.children);
     clientServices.producto()
     .then((data) => {
         const filteredProducts = data.filter(product => product.category === id);
@@ -59,7 +60,8 @@ const content = `
             const nuevaLinea = productClient(name, numFixed, url, id);
             producList.appendChild(nuevaLinea);
         })
-            }).catch((error) => error);
+    }).catch((error) => error);
+
     return linea
 }
 
