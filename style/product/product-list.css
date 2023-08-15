@@ -1,7 +1,7 @@
 .product__list {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 13px;
     width: 100%;
 }
 .product__list .heart {
