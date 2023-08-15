@@ -50,7 +50,6 @@ const content = `
     </ol>`
     linea.innerHTML = content
     const producList = linea.querySelector('.product__list')
-    console.log(producList.children);
     clientServices.producto()
     .then((data) => {
         const filteredProducts = data.filter(product => product.category === id);
