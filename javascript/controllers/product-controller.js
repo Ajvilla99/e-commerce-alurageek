@@ -177,7 +177,7 @@ closeAlert.addEventListener('click', () =>{
     modalAlert.classList.remove('modal__alert__show');
 })
 // Editar Producto - Actualizar producto
-formEdit.addEventListener('submit', async (e) => {
+formEdit.addEventListener('submit',(e) => {
     e.preventDefault()
     const nameEdit = document.querySelector('[data-tipo="nombre-edit"]').value;
     const descriptionEdit = document.querySelector('[data-tipo="description-edit"]').value;
@@ -254,7 +254,7 @@ clientServices.category()
 const showModal = document.querySelector('.modal__alert');
 const editCategoryShow = document.querySelector('.category__edit')
 const nameCat = document.querySelector('.edit__category__name')
-    function readCategories (name, id) {
+function readCategories (name, id) {
     const linea = document.createElement('section');
     linea.classList.add('product__list_box');
     const content = `
@@ -287,26 +287,30 @@ const nameCat = document.querySelector('.edit__category__name')
             producList.appendChild(nuevaLinea);
         });
     }).catch((error) => error);
-    const editCategory = linea.querySelector('.btn__edit')
-    editCategory.addEventListener('click', () => {
-        editCategoryShow.classList.add('category__edit__show')
-        clientServices.editCategory(id).then((category) => {
-            editCat = {...category}
-            nameCat.value = category.name;
-        })
-    })
 
+    const editCategory = linea.querySelector('.btn__edit')
+    editCategory.addEventListener('click', async () => {
+        try {
+            editCategoryShow.classList.add('category__edit__show')
+            clientServices.editCategory(id).then((category) => {
+                editCat = {...category}
+                nameCat.value = category.name;
+            })
+        } catch (error) {
+            console.log(error);
+        }
+    })
     const deleteCategory = linea.querySelector('.btn__trash');
     const titleDelete = document.querySelector('.title__delete');
     const detalleSpan = document.querySelector('.detalle__span');
-    deleteCategory.addEventListener('click', () => {
+    deleteCategory.addEventListener('click', async () => {
         titleDelete.textContent = 'Eliminar Categoria'
         detalleSpan.textContent = '¿Desea eliminar esta categoria de forma permanente?'
         showModal.classList.add('modal__category__show');
         const deleteTrue = document.querySelector('.btn__true');
-        deleteTrue.addEventListener('click', () => {
+        deleteTrue.addEventListener('click', async () => {
             clientServices.deleteCategory(id)
-            .then(response => {})
+            .then(response => response)
                 .catch(err => alert('Ocurrio un error'));
         })
     })   

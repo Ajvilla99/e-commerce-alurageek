@@ -24,15 +24,16 @@ footer {
 }
 
 .detail__product {
-    height: 80vh;
-    min-height: 80vh;
+    position: static;
+    height: 100%;
+    min-height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .detail__box {
-    width: 80%;
+    width: 65%;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -108,7 +109,7 @@ footer {
     height: 60%;
     max-width: 100%;
     border: 1px solid #18314F70;
-    border-radius: 1rem;
+    border-radius: 2px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -132,7 +133,7 @@ footer {
     font-size: 13px;
     font-weight: 400;
     padding: 3px 24px 3px 5px;
-    border-radius: 8px;
+    border-radius: 4px;
     background-color: var(--btn-blue);
     cursor: pointer;
     color: var(--text-white);
@@ -158,7 +159,6 @@ footer {
     position: absolute;
     width: 100px;
     max-height: 300px;
-    border-radius: 8px;
     bottom: -30%;
     overflow-y: scroll;
     padding: 5px 0;
@@ -199,4 +199,45 @@ footer {
     -webkit-box-shadow: 10px 10px 5px -3px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 5px -3px rgba(0,0,0,0.75);
     box-shadow: -5px 5px 5px -1px rgba(0,0,0,0.75);
+}
+
+@media (max-width: 720px) {
+    .detail__product {
+        flex-direction: column;
+        
+    }
+    .detail__box {
+        flex-direction: column;
+        width: 100%;
+    }
+    .aside_left {
+        flex-direction: column;
+        width: 100%;
+    }
+    .image_box img {
+        max-height: 220px;
+        max-width: 220px;
+    }
+    .description_box {
+        width: 90%;
+        max-width: 90%;
+    }
+    .title_product {
+        width: 90%;
+        font-size: 18px;
+    }
+    .price_product {
+        width: 90%;
+        text-indent: 18px;
+    }
+    .description_product {
+        width: 90%;
+    }
+    .aside_right {
+        width: 90%;
+        height: 200px;
+    }
+    .cant_contain {
+        
+    }
 }

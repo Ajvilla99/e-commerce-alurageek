@@ -1,5 +1,5 @@
-const formLogin = () => {
-    return fetch("https://json-ecommerce-alura-geek.vercel.app/users").then( response => response.json())
+const formLogin = async () => {
+    return await fetch("https://json-ecommerce-alura-geek.vercel.app/users").then( response => response.json())
 }
 
 const createUser = (name, email, password) => {
@@ -47,12 +47,30 @@ const deleteCategory = (id) => {
     })
 }
 
-const ordenerCategory = (category) => {
-    return fetch(`http://localhost:3000/products/${category}`).then( response => response.json())
+const ordenerCategory = async (category) => {
+    try {
+        const response = fetch(`https://json-ecommerce-alura-geek.vercel.app/categories/${category}`);
+        if (!response || !response?.ok) {
+            throw new Error('Error en la petición');
+        }
+        const data = response.json()
+        return data
+    } catch (error) {
+        throw error
+    }
 }
 
-const producto = () => {
-    return fetch("https://json-ecommerce-alura-geek.vercel.app/products").then( response => response.json())
+const producto = async () => {
+    try {
+        const response = await fetch("https://json-ecommerce-alura-geek.vercel.app/products");
+    if (!response.ok) {
+        throw new Error('Error en la petición');
+    }
+    const data = response.json()
+    return data
+    } catch (error) {
+        throw error
+    }
 }
 
 const crearProducto = (name, description, url, price, category) => {
@@ -66,8 +84,19 @@ const crearProducto = (name, description, url, price, category) => {
     })
 }
 
-const editProduct = (id) => {
-    return fetch(`https://json-ecommerce-alura-geek.vercel.app/products/${id}`).then( response => response.json())
+const editProduct = async (id) => {
+    try {
+        const response = await fetch(`https://json-ecommerce-alura-geek.vercel.app/products/${id}`);   
+        if(!response.ok) {
+            throw new Error('Error fetching')
+        }
+        const data = await response.json();
+        return data
+    } catch (error) {
+        console.error('Error fetching product:', error);
+        throw error;
+    }
+    
 }
 
 const deleteProduct = (id) => {
@@ -76,19 +105,38 @@ const deleteProduct = (id) => {
     })
 }
 
-const updateProduct = (name, description, url, price, category, id) => {
-    return fetch(`https://json-ecommerce-alura-geek.vercel.app/products/${id}`, {
-        method: 'PUT',
-        headers:{'Content-Type': 'Application/JSON'},
-        body : JSON.stringify({name, description, url, price, category, id}),
-    })
-        .then((response) => console.log(response))
-        .catch((error) => console.log(error));
+const updateProduct = async (name, description, url, price, category, id) => {
+    try {
+        const response = await fetch(`https://json-ecommerce-alura-geek.vercel.app/products/${id}`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, description, url, price, category, id }),
+        });
+
+        if (!response.ok) {
+            throw new Error('Error updating product');
+        }
+
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error updating product:', console.log(error));
+        throw error;
+    }
 };
 
-const productCategory = () => {
-    return fetch("http://localhost:3000/products").then( response => response.json())
-}
+const productCategory = async () => {
+    try {
+        const response = await fetch("https://json-ecommerce-alura-geek.vercel.app/products");
+        if (!response.ok) {
+            throw new Error('Error fetching products');
+        }
+        return response.json();
+    } catch (error) {
+        console.error('Error:', error);
+        throw error;
+    }
+};
 
 export const clientServices = {
     formLogin,
