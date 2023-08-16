@@ -10,14 +10,14 @@
     width: 80%;
     height: 100px;
     background-color: var(--color-bg-2);
-    border-radius: 8px;
+    border-radius: 2px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .container__giftcode p {
     font-size: 32px;
-    color: var(--text-color-alt);
+    color: var(--text-white);
 }
 .container__giftcode p span {
     font-weight: 600;

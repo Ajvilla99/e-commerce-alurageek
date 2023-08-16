@@ -1,33 +1,49 @@
 import { clientServices } from "../services/product-services.js";
 
 
+const menuActive = document.querySelector('.menu_mobile');
+const navMenu = document.querySelector('.nav__menu');
+menuActive.addEventListener('click', () => {
+    navMenu.classList.toggle('active')
+    menuActive.classList.toggle('bx-x')
+    menuActive.classList.toggle('mobile_active')
+})
+
 function productClient (name, price, url, id) {
         const linea = document.createElement("li");
         linea.classList.add('product__item');
         const content = `
-            <div class="product__img">
-                <img class="product__img__card" id="img__product"
-                src="${url}" 
-                alt="Imagen Producto">
-            </div>
-            <div class="product__description">
-                <div class="name__description">
-                    <p>${name}</p>
+            <a class="detail__product">
+                <div class="product__img">
+                    <img class="product__img__card" id="img__product"
+                    src="${url}" 
+                    alt="Imagen Producto">
                 </div>
-                <div class="product__price">
-                    <span class="price">
-                        $${price}
-                    </span>
+                <div class="product__description">
+                    <div class="name__description">
+                        <p>${name}</p>
+                    </div>
+                    <div class="product__price">
+                        <span class="price">
+                            $${price}
+                        </span>
+                    </div>
                 </div>
-            </div>
-            <div class="product__shop">
-                <div class="add__cart int__shop" href="#">
-                    <a class="addTo__cart" href="./screen/view-product.html?id=${id}">
-                        <span>Ver producto</span>
-                    </a>
+                <div class="product__shop">
+                    <div class="add__cart int__shop" href="#">
+                        <a class="addTo__cart" href="./screen/view-product.html?id=${id}">
+                            <span>Ver producto</span>
+                        </a>
+                    </div>
                 </div>
-            </div>`
+            </a>`
+            
         linea.innerHTML = content;
+        const detail = linea.querySelector('.detail__product')
+        const detailClick = linea.querySelector('.addTo__cart')
+        detail.addEventListener('click', () => {
+            detailClick.click()
+        })
         return linea
 }
 

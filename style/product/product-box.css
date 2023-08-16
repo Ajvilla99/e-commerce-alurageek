@@ -76,6 +76,8 @@
     }
 
     .head__category {
-        width: 80%;
+        width: calc(80% - 10px);
+        justify-content: space-between;
+        padding: 0 10px;
     }
 }

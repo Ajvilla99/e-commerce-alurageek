@@ -80,10 +80,10 @@ const updateProduct = (name, description, url, price, category, id) => {
     return fetch(`https://json-ecommerce-alura-geek.vercel.app/products/${id}`, {
         method: 'PUT',
         headers:{'Content-Type': 'Application/JSON'},
-        body : JSON.stringify ({name, description, url, price, category, id}),
+        body : JSON.stringify({name, description, url, price, category, id}),
     })
-        .then((response) => response)
-        .catch((error) => error);
+        .then((response) => console.log(response))
+        .catch((error) => console.log(error));
 };
 
 const productCategory = () => {

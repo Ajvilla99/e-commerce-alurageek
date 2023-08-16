@@ -176,16 +176,15 @@ let closeAlert = document.querySelector('.btn__false')
 closeAlert.addEventListener('click', () =>{
     modalAlert.classList.remove('modal__alert__show');
 })
-
 // Editar Producto - Actualizar producto
-formEdit.addEventListener('submit', (e) => {
+formEdit.addEventListener('submit', async (e) => {
     e.preventDefault()
     const nameEdit = document.querySelector('[data-tipo="nombre-edit"]').value;
     const descriptionEdit = document.querySelector('[data-tipo="description-edit"]').value;
     const priceEdit = document.querySelector('[data-tipo="price-edit"]').value;
     const imgEdit = document.getElementById('view-ed').src;
     const categoryEdit = document.querySelector('[data-tipo="category-ed"]').value
-    clientServices.updateProduct(nameEdit, descriptionEdit, imgEdit, priceEdit, categoryEdit,editObject?.id)
+    clientServices.updateProduct(nameEdit, descriptionEdit, imgEdit, priceEdit, categoryEdit,editObject?.id).then(response => response)
 })
 
 // Previsualizar imagen seleccionada

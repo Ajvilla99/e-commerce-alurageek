@@ -3,8 +3,11 @@
     --color-bg: #F8F1F4;
     --color-bg-2 : #18314F;
 
+    --color-primary: ;
+    --color-second: ;
+
     --btn-color: #0b2536;
-    --font: 'Poppins', sans-serif ;
+    --font: 'Jost', sans-serif ;
     --text-color-blue: #18314F50;
     --text-bg-hover: #3c69a3db;
     --text-color-alt: #fff;
@@ -27,7 +30,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    background-color: var(--color-bg);
+    background-color: #fefefe;
     color: var(--text-color);
     font-family: var(--font);
     font-size: 16px;

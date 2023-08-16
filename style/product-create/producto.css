@@ -53,3 +53,13 @@ main {
 .custom-icon {
     color: var(--color-azul-claro);
 }
+
+.btn__box {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 720px) {
+    
+}
