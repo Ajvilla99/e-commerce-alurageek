@@ -221,6 +221,7 @@ footer {
     .description_box {
         width: 90%;
         max-width: 90%;
+        gap: 1rem;
     }
     .title_product {
         width: 90%;
@@ -228,16 +229,17 @@ footer {
     }
     .price_product {
         width: 90%;
-        text-indent: 18px;
-    }
-    .description_product {
-        width: 90%;
     }
     .aside_right {
         width: 90%;
-        height: 200px;
+        height: 220px;
     }
-    .cant_contain {
-        
+
+    .aside_right .price_product {
+        text-indent: 18px;
+    }
+    .text_description {
+        width: 100%;
+        text-align: justify;
     }
 }
