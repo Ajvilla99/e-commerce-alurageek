@@ -225,7 +225,6 @@ footer {
         gap: 1rem;
     }
     .title_product {
-        width: 90%;
         font-size: 18px;
     }
     .price_product {
@@ -235,7 +234,9 @@ footer {
         width: 90%;
         height: 220px;
     }
-
+    .description_product h3 {
+        font-size: 20px;
+    }
     .aside_right .price_product {
         text-indent: 18px;
     }
