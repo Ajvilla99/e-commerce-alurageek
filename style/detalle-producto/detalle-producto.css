@@ -17,16 +17,18 @@
 }
 
 footer {
-    position: static;
+    position: fixed;
     width: 100%;
     bottom: 0;
     left: 0;
 }
 
 .detail__product {
-    position: static;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-    min-height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,7 +82,7 @@ footer {
 .title_product {
     height: 10%;
     font-size: 24px;
-    font-weight: 50033;
+    font-weight: 500;
     display: flex;
     align-items: center;
     border-bottom: 1px solid #18314F70;
@@ -204,7 +206,7 @@ footer {
 @media (max-width: 720px) {
     .detail__product {
         flex-direction: column;
-        
+        position: relative;
     }
     .detail__box {
         flex-direction: column;

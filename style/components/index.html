@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="./menu.css">
+    <link rel="stylesheet" href="./slider.css">
+    <link rel="stylesheet" href="./banner.css">
+    <link rel="stylesheet" href="./buttons.css">
+    <link rel="stylesheet" href="./footer.css">
+
+    <!-- Menu Filter -->
+    <link rel="stylesheet" href="./filter/menu-category.css">
+    <link rel="stylesheet" href="./filter/products.css">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;500;900&display=swap" rel="stylesheet">
+    <!-- icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <div class="menu_container">
+            <div class="menu_top">
+                <div class="top_left">
+                    <div class="logo_container">
+                        <a id="logo"><img src="https://res.cloudinary.com/dyl3eqv3u/image/upload/v1691950022/img/logos/vs2ikmdxqiqzgsi1mnbv.png"></a>
+                    </div>
+                    <div class="search_container">
+                        <input class="input_search" type="search" placeholder="Buscar productos...">
+                        <div class="icon_search">
+                            <i class="bx bx-search"></i>
+                        </div>
+                    </div>            
+                </div>
+                <div class="top_right">
+                        <span class="login_access">
+                            <a href="">Iniciar sesion</a>
+                        </span>
+                        <span class="space">
+                            |
+                        </span>
+                        <span class="login_access">
+                            <a href="">Registrarse</a>
+                        </span>
+                </div>  
+            </div>
+            <div class="menu_bot">
+                <div class="menu_mobile">
+                    <span class="line_top line"></span>
+                    <span class="line_mid line"></span>
+                    <span class="line_bot line"></span>
+                </div>
+                <div class="nav_container .active_navbar">
+                    <nav class="navbar" id="navbar">
+                        <ul class="item_container">
+                            <li class="list_item"><a href="">inicio</a></li>
+                            <li class="list_item"><a href="">categorias</a></li>
+                            <li class="list_item"><a href="">ofertas</a></li>
+                            <li class="list_item"><a href="">vender</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="menu_shop">
+                    <a href="#" class="shop_icon icon_bell"><i class="bx bx-bell">
+                            <span class="bell_notification">1</span>
+                        </i>
+                    </a>
+                    <a href="#" class="shop_icon"><i class="bx bx-heart"></i></a>
+                    <a href="#" class="shop_icon"><i class="bx bx-cart"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="gift">
+            <span class="text_gift"> 
+                Obten un 20% de descuento con el codigo <span class="text_bold"><span>alura</span><span class="yellow">col</span><span class="blue">omb</span><span class="red">ia</span></span>
+            </span>
+            <button class="btn_close close_gift">
+                <i class="bx bx-x"></i>
+            </button>
+        </div>
+    </header>
+    <main>
+        <section class="banner_container">
+            <div class="banner">
+                <div class="banner_box">
+                    <i class='bx bxs-credit-card'></i>
+                    <span class="text_center text_title">Hasta 48 cuotas
+                        <a class="banner_link" href="#">ver mas</a>
+                    </span>
+                    
+                </div>
+                <div class="banner_box">
+                    <i class='bx bxs-bank'></i>
+                    <span class="text_center text_title">Transferencia desde tu banco
+                        <a class="banner_link" href="#">ver mas</a>
+                    </span>
+                    
+                </div>
+                <div class="banner_box">
+                    <i class="bx bx-money"></i>
+                    <span class="text_center text_title">Paga en efectivo
+                        <a class="banner_link" href="#">ver mas</a>
+                    </span>
+                    
+                </div>
+                <div class="banner_box">
+                    <i class="bx bx-plus"></i>
+                    <span class="text_center text_title">Más medios de pago
+                        <a class="banner_link" href="#">ver mas</a>
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="filter_container">
+                <aside class="menu_filter_container">
+                    <!-- menu filter -->
+                    <div class="filter_category">
+                        <div class="filter_header">
+                            <i class="bx bx-filter"></i>
+                            <h1>Filtro de busqueda</h1>
+                        </div>
+
+                        <div class="item__box">
+                            <div class="item_head_box">
+                                <h3>Por categoria</h3>
+                            </div>
+                            <div class="item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Star wars</label>
+                            </div>
+                            <div class="item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Ropa</label>
+                            </div>
+                            <div class="item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Consolas</label>
+                            </div>
+                        </div>
+
+                        <div class="item__box">
+                            <div class="item_head_box">
+                                <h3>Calificacion</h3>
+                            </div>
+                            <div class="item">
+                                <span>
+                                    <i class="bx bxs-star point"></i>
+                                    <i class="bx bxs-star point"></i>
+                                    <i class="bx bxs-star point"></i>
+                                    <i class="bx bxs-star point"></i>
+                                    <i class="bx bx-star point"></i>
+                                    o mas
+                                </span>
+                            </div>
+                            <div class="item">
+                                <span>
+                                    <i class="bx bxs-star point"></i>
+                                    <i class="bx bxs-star point"></i>
+                                    <i class="bx bxs-star point"></i>
+                                    <i class="bx bx-star point"></i>
+                                    <i class="bx bx-star point"></i>
+
+                                    o mas
+                                </span>
+                            </div>
+                            <div class="item">
+                                <span>
+                                    <i class="bx bxs-star point"></i>
+                                    <i class="bx bxs-star point"></i>
+                                    <i class="bx bx-star point"></i>
+                                    <i class="bx bx-star point"></i>
+                                    <i class="bx bx-star point"></i>
+                                    o mas
+                                </span>
+                            </div>
+                            <div class="item">
+                                <span>
+                                    <i class="bx bxs-star point"></i>
+                                    <i class="bx bx-star point"></i>
+                                    <i class="bx bx-star point"></i>
+                                    <i class="bx bx-star point"></i>
+                                    <i class="bx bx-star point"></i>
+                                    o mas
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="item__box">
+                            <div class="item_head_box">
+                                <h3>Servicio y promoción</h3>
+                            </div>
+                            <div class="item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Opcion</label>
+                            </div>
+                            <div class="item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Opcion</label>
+                            </div>
+                            <div class="item">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Opcion</label>
+                            </div>
+                        </div>
+
+                    </div>
+                </aside>
+
+
+                <aside class="view_product_container">
+                    <div class="menu_filter_right">
+                        <span>Ordenar por:</span>
+                        <div class="ordener_category_box">
+                            <div class="btn_category">Relevancia</div>
+                            <div class="btn_category">Pedido</div>
+                            <div class="btn_category">Precio</div>
+                        </div>
+                        <div></div>
+                        <div class="view_category">
+                            <span class="head_view_category">ver:</span>
+                            <button>
+                                <i class='bx bxs-grid-alt'></i>
+                            </button>
+                            <button class="btn_view_menu">
+                                <i class='bx bx-menu'></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product_container">
+                        <ul id="card_product_box card_box_col">
+                            <li class="list_item_product item_product_row item_product_col">
+                                <a href="" class="link_product">
+                                    <div class="product product_grid product_col">
+                                        <img src="https://res.cloudinary.com/dyl3eqv3u/image/upload/v1691950020/img/starwars/nnh28yf77dnmrwmztzos.png" alt="">
+                                        <div class="price_product">$20</div>
+                                        <div class="product_content_absolute">
+                                            <div class="product_point">
+                                                <i class="bx bxs-star"></i>
+                                                <i class="bx bxs-star"></i>
+                                                <i class="bx bxs-star"></i>
+                                                <i class="bx bxs-star"></i>
+                                                <i class="bx bx-star"></i>
+                                            </div>
+                                            <button class="btn_product">
+                                                <i class="bx bxs-cart"></i>
+                                                Agregar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+    </main>
+    <!-- <div class="buttom__container">
+        <button class="btn btn_blanco">boton blanco</button>
+        <button class="btn btn_azul">boton azul</button>
+        <input class="btn" type="button" value="boton input">
+    </div> -->
+    <footer>
+        
+        <p>&copy; 2021 - Todos los derechos reservados.</p>
+    </footer>
+    <script src="./menu.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

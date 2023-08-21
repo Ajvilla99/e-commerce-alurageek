@@ -21,7 +21,6 @@ body {
     display: flex;
     height: 650px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-    border-radius: 10px;
     overflow: hidden;
 }
 
@@ -85,7 +84,7 @@ body {
     transition: all 1.15s;
     z-index: 1;
     opacity: 0;
-    background-color: var(--color-bg);
+    background-color: #fff;
 }
 
 .container .box .form.sign_in {
@@ -93,6 +92,7 @@ body {
     transition: all 1.15s;
     z-index: 5;
     background-color: #fff;
+    justify-content: space-evenly;
 }
 
 .container.active .box .form.sign_in {
@@ -181,7 +181,6 @@ body {
     font-weight: 550;
     background-color: transparent;
     padding: 12px 45px;
-    border-radius: 22px;
     border: 1.5px solid #fff;
     cursor: pointer;
 }
@@ -197,6 +196,7 @@ form .type span {
 form .type .message__error {
     display: block;
 }
+
 .form h3 {
     color: #222;
     font-size: 40px;
@@ -246,4 +246,150 @@ form .type .message__error {
     width: 70%;
     margin-top: 5rem;
     font-size: 14px;
+}
+
+@media (max-width: 720px) {
+    .container {
+        width: 90vw!important;
+        height: 90vh!important;
+        display: flex;
+        flex-direction: column;
+    }
+    .container .box {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 50%;
+        transition: all 0.8s;
+        transform: translateY(0);
+        background-color: #fff;
+        z-index: 1;
+        overflow: hidden;
+    }
+    .container.active .box {
+        transform: translateY(100%);
+    }
+    .container .box .form {
+        position: absolute;
+        min-height: 100%;
+        min-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .container .box .form.sign_up {
+        transition: all 0.5s;
+        opacity: 0;
+        transform: translateY(100%);
+        height: 100%;
+    }
+
+    .container.active .box .form.sign_up {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    
+    .container .box .form.sign_in {
+        transition: all 0.5s;
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
+    .container.active .box .form.sign_in {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    .container .overlay {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 50%;
+        transition: all 0.8s;
+        transform: translateY(0);
+        background-color: var(--color-bg-2);
+        z-index: 1;
+        z-index: 5;
+        opacity: 1;
+        overflow: hidden;
+    }
+    
+    .container.active .overlay {
+        transform: translateY(-100%);
+    }
+    .container .overlay .page {
+        min-height: 100%;
+        min-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        transition: all 0.5s;
+        opacity: 1;
+    }
+
+    .container.active .overlay .page.page_signIn {
+        opacity: 0;
+        margin: 0%;
+        transform: translateY(-100%);
+        pointer-events: none;
+    }
+    .container.active .overlay .page.page_signUp {
+        margin-left: 0%;
+        transform: translateY(-100%);
+    }
+
+    .overlay .page h3 {
+        color: #fff;
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+    
+    .overlay .page p {
+        color: #fff;
+        font-weight: 600;
+        margin-bottom: 20px;
+        font-size: 17px;
+    }
+
+    .form_input .type {
+        width: 330px;
+        height: 48px;
+        background-color: #EEEDEF;
+        margin: 20px 0;
+    }
+
+    .terminos__condiciones {
+        width: 70%;
+        margin-top: 1rem;
+        font-size: 14px;
+    }
+
+    form .type .message__error {
+        display: block;
+    }
+
+    form .type span {
+        position: absolute;
+        color: var(--color-invalid);
+        top: 25%;
+        text-align: center;
+        width: 330px;
+        display: none;
+    }
+}
+
+@media (max-height: 738px) {
+    form .type span {
+        position: absolute;
+        color: var(--color-invalid);
+        top: 20%;
+        text-align: center;
+        width: 330px;
+        display: none;
+    }
 }
