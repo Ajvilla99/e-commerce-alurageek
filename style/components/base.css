@@ -62,6 +62,10 @@ body {
     gap: 2rem;
 }
 
+.icon_login {
+    display: none;
+}
+
 .search_container {
     position: relative;
 }
@@ -138,7 +142,7 @@ body {
 }
 /* Menu bot */
 .menu_bot {
-    width: 70%;
+    width: 80%;
     display: flex;
     justify-content: space-between;
 }
@@ -409,6 +413,25 @@ body {
         width: 100%;
         gap: 0;
     }
+
+    .logo_container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .icon_login {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: var(--white-primary);
+        font-family: var(--primary-font);
+        gap: 5px;
+        font-size: 20px;
+    }
+
+
     .search_container {
         width: 90%;
     }
